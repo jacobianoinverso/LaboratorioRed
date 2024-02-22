@@ -1,4 +1,4 @@
-streamlit run PaginaChilera666.py# file: streamlit_tests.py
+# file: streamlit_tests.py
 # date: 05-02-2024
 
 import streamlit as st
