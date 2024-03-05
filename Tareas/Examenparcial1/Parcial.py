@@ -11,9 +11,9 @@ st.write('He aquí una erramienta que permite representar de forma gráfica la c
 
 n = st.number_input('Inserte el número de tiros n\n', min_value=1, max_value=100, step=1, help='Insertar un valor entre 1 y 100"')      #pedimos al usuario los datos necesarios para calcular la distribución binomial
 
-p = st.number_input('Inserte la posibilidad de éxito p\n', min_value=0.01, max_value=1.00, step=0.01, value=1.50, help='insertar un valor entre 0 y 1')
+p = st.number_input('Inserte la posibilidad de éxito p\n', min_value=0.01, max_value=1.00, step=0.01, value=0.50, help='insertar un valor entre 0 y 1')
 
 q=1-p 
 
 DistBi = np.random.binomial(n=n,p=p,size=10)
-print(DistBi)
+st.write(DistBi)
