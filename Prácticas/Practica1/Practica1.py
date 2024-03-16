@@ -44,7 +44,7 @@ st.title('Distribución de tiros de monedas')
 
 m = st.slider('Elija el número de tiros para graficar la distribución',1,100)
 
-data = pd.read_csv('C:\Users\Jacobo\Desktop\LaboratorioRed\Prácticas\Practica1\fichas.csv')
+data = pd.read_csv('fichas.csv')
 data = data.loc[:m,'GM']
 print(f'data:\n{data}')
 
