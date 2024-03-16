@@ -21,7 +21,6 @@ background_image = """
 
 st.markdown(background_image, unsafe_allow_html=True)
 
-st.text_input("", placeholder="Streamlit CSS ")
 
 input_style = """
 <style>
@@ -40,5 +39,5 @@ div[data-baseweb="base-input"] {
 st.markdown(input_style, unsafe_allow_html=True)
 
 
-st.title('Distribución de 100 tiros de monedas advanced')
+st.title('<h1 style="font-family: serif; color:white; font-size: 20px;">Distribución de tiros de monedas✨ </h1>')
 
