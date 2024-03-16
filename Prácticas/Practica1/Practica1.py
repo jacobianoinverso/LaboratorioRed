@@ -1,5 +1,4 @@
 import streamlit as st
-import plotly as pt
 from matplotlib import pyplot as plt
 import numpy as np
 import pandas as pd
@@ -53,4 +52,4 @@ print(f'data:\n{data}')
 fitted_results = ss.fit(ss.binom,data,bounds=[(0,100),(0,1)])
 print(fitted_results)
 fitted_results.plot()
-plt.show()
+st.pyply()
