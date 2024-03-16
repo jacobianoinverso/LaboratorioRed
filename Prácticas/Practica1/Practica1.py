@@ -47,7 +47,7 @@ st.title('Distribución de tiros de monedas')
 m = st.slider('Elija el número de tiros para graficar la distribución',1,100)
 
 data = pd.read_csv("fichas.csv")
-data = data.loc[:m,'GM']
+data = data.loc[:m,'JC']
 print(f'data:\n{data}')
 
 fitted_results = ss.fit(ss.binom,data,bounds=[(0,100),(0,1)])
