@@ -39,5 +39,5 @@ div[data-baseweb="base-input"] {
 st.markdown(input_style, unsafe_allow_html=True)
 
 
-st.title(Distribución de tiros de monedas)
-st.write(Estos celos me hacen daño, me enloquecen.)
+st.title('Distribución de tiros de monedas')
+st.write('Estos celos me hacen daño, me enloquecen.')
