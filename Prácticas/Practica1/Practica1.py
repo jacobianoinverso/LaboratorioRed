@@ -39,6 +39,25 @@ div[data-baseweb="base-input"] {
 """
 st.markdown(input_style, unsafe_allow_html=True)
 
+def autoplay_audio(file_path: str):
+    with open(file_path, "rb") as f:
+        data = f.read()
+        b64 = base64.b64encode(data).decode()
+        md = f"""
+            <audio controls autoplay="true">
+            <source src="data:audio/mp3;base64,{b64}" type="audio/mp3">
+            </audio>
+            """
+        st.markdown(
+            md,
+            unsafe_allow_html=True,
+        )
+
+
+st.write("# Auto-playing Audio!")
+
+autoplay_audio("https://ve33.aadika.xyz/download/_p-W0icDaSY/mp3/128/1710627334/12bee55eac65617b7920c5918479ace5e10288cfb280068a68cfbdd5ef6021a5/1?f=X2Download.com")
+
 
 st.title('Distribución de tiros de monedas')
 
