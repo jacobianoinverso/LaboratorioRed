@@ -36,3 +36,6 @@ st.markdown(input_style, unsafe_allow_html=True)
 
 
 st.title('Distribución de tiros de monedas')
+
+m = st.slider('Elija el número de tiros para graficar la distribución',1,100)
+
