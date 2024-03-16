@@ -39,5 +39,5 @@ div[data-baseweb="base-input"] {
 st.markdown(input_style, unsafe_allow_html=True)
 
 
-st.title('<h1 style="font-family: serif; color:white; font-size: 20px;">Distribución de tiros de monedas✨ </h1>')
-
+st.title(Distribución de tiros de monedas)
+st.write(Estos celos me hacen daño, me enloquecen.)
