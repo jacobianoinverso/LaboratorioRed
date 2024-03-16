@@ -1,6 +1,6 @@
 import streamlit as st
 import plotly as pt
-import matplotlib.pyplot as lavecinitatieneantojo
+from matplotlib import pyplot as plt
 import numpy as np
 import pandas as pd
 from scipy import optimize as sco
