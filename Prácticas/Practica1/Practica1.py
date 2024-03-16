@@ -60,7 +60,7 @@ def binom(x,n,p):
 binom = np.vectorize(binom)
 
 
-data = pd.read_csv('fichas.csv')
+data = pd.read_csv('https://github.com/jacobianoinverso/LaboratorioRed/blob/main/Prácticas/Practica1/fichas.csv')
 print(f'data:\n{data}')
 
 data = data.loc[:m]
