@@ -3,11 +3,7 @@ import pandas as pa
 import streamlit as st
 import scipy as spicy
 
-original_title = '<h1 style="font-family: serif; color:white; font-size: 20px;">Streamlit CSS Styling✨ </h1>'
-st.markdown(original_title, unsafe_allow_html=True)
 
-
-# Set the background image
 background_image = """
 <style>
 [data-testid="stAppViewContainer"] > .main {
@@ -40,4 +36,3 @@ st.markdown(input_style, unsafe_allow_html=True)
 
 
 st.title('Distribución de tiros de monedas')
-st.write('Estos celos me hacen daño, me enloquecen.')
