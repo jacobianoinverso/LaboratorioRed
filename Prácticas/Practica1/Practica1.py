@@ -36,7 +36,9 @@ div[data-baseweb="base-input"] {
 }
 </style>
 """
-st.markdown(input_style, unsafe_allow_html=True)
+
+
+
 
 
 
@@ -44,9 +46,9 @@ st.markdown(input_style, unsafe_allow_html=True)
 
 st.title('Distribución de tiros de monedas')
 
-st.write( '<h4 id="anchor_tag">title</h4>', unsafe_allow_html = True)
+st.write('Con ayuda de este programa, usted podrá ver los datos de 100 tiros de 10 monedas ajustarse a una distribución binomial.')
 
-st.write('<a href="#anchor_tag">click</a> vecinita tiene anoto', unsafe_allow_html = True)
+st.markdown("[Section 1](#distribución-de-tirs-de-monedas)")
 
 m = st.slider('Elija el número de tiros para graficar la distribución',1,100)
 
