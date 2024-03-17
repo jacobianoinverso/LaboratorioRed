@@ -181,7 +181,7 @@ st.write(binomial_plot2)
 #
 
 
-st.title('Conceptos básicos:', anchor = '#Marco-teórico')
+st.title('Conceptos básicos:', anchor = 'Marco-teórico')
 
 
 
