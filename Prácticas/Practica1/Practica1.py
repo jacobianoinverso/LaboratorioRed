@@ -111,8 +111,9 @@ st.write(binomial_plot)
 
 
 
+st.text('Conteo medio de caras por cada' + m + 'tiros:')
 
-
+acaca = np.average(1,2,3,4)
 
  #Grafica 1
 #
