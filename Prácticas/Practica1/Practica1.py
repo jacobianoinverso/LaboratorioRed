@@ -94,4 +94,4 @@ binomial_plot = px.line(x=counts.index.values, y=binom(counts.index.values,n,p),
 
 binomial_plot.add_bar(x=counts.index.values, y=counts[0]/m, name='Lanzamientos experimentales')
 
-st.pyplot()
+st.write(binomial_plot)
