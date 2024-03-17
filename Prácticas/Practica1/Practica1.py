@@ -41,7 +41,23 @@ st.markdown(input_style, unsafe_allow_html=True)
 
 
 
+
 st.title('Distribución de tiros de monedas')
+
+
+
+
+
+
+
+
+
+
+ #Grafica 1
+#
+#
+#
+#
 
 m = st.slider('Elija el número de tiros para graficar la distribución',1,100)
 
@@ -95,3 +111,66 @@ binomial_plot = px.line(x=counts.index.values, y=binom(counts.index.values,n,p),
 binomial_plot.add_bar(x=counts.index.values, y=counts[0]/m, name='Lanzamientos experimentales')
 
 st.write(binomial_plot)
+
+
+
+
+#Grafica 2 
+#
+#
+#
+#
+
+
+r = 600
+
+def binom(x,n,p):
+    # print('binom(',x,n,p,')')
+    
+    x = int(x)
+    n = int(n)
+        
+    comb = math.comb(n,x)
+    p_x = p**x
+    q_nx = (1-p)**(n-x)
+
+    return comb*p_x*q_nx
+    # return A * scs.binom.pmf(x,n,p)
+
+binom = np.vectorize(binom)
+
+
+data = pd.read_csv('fichas.csv')
+print(f'data:\n{data}')
+
+counts_non_sort = data.value_counts()
+counts = pd.DataFrame(np.zeros(11))
+# print(counts)
+
+for row, value in counts_non_sort.items():
+    counts.loc[row,0] = value
+
+print(f'counts:\n{counts}')
+print(f'index: {counts.index.values}')
+print(f'normalized counts: {list(counts[0]/r)}')
+
+
+fit, cov_mat = sco.curve_fit(binom,counts.index.values,counts[0]/r,[10,0.5],bounds=[(0,0),(np.inf,1)])
+
+print(f'Fit:\n{fit}\ncov_mat\n{cov_mat}')
+
+n = fit[0]
+p = fit[1]
+
+print(f'Este es el valor de n: {n}\nEste es el valor de p: {p}')
+
+
+
+
+binomial_plot2 = px.line(x=counts.index.values, y=binom(counts.index.values,n,p), title="Lanzamiento de todas las fichas")
+
+binomial_plot2.add_bar(x=counts.index.values, y=counts[0]/r, name='Lanzamientos experimentales')
+
+st.write(binomial_plot2)
+
+
