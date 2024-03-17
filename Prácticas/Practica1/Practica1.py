@@ -48,7 +48,7 @@ m = st.slider('Elija el número de tiros para graficar la distribución',1,100)
 data = pd.read_csv("fichas.csv")
 aa = data.loc[:m,'JC']
 
-plt.hist(x=aa, bins=intervalos, color='#F2AB6D', rwidth=0.85)
+plt.hist(x=range(1,10), bins=aa, color='#F2AB6D', rwidth=0.85)
 plt.title('Histograma de tiros de monedas')
 plt.xlabel('Cantidad de caras')
 plt.ylabel('Cantidad de veces')
