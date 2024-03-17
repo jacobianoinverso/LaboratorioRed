@@ -108,7 +108,7 @@ st.write(binomial_plot)
 
 
 
-
+advanced = str(m)
 
 
 st.text('Conteo medio de' + advanced + 'caras')
@@ -116,7 +116,7 @@ st.text('Conteo medio de' + advanced + 'caras')
 
 chess = sum(data['JC'])/(m+1)
 battle = round(chess, 2)
-advanced = str(m)
+
 
 
 st.text(battle)
