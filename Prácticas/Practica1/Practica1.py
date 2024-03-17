@@ -57,6 +57,7 @@ st.pyplot()
 
 
 X = 1
+Y = 2
 fig = plt.figure(figsize=(8,8))
 plt.figure(figsize=(8,8))
 plt.scatter(X[Y==0,0], X[Y==0,1], s=100, c='green', label='Cluster 1')
