@@ -46,7 +46,7 @@ st.title('Distribución de tiros de monedas')
 
 st.write( '<h4 id="anchor_tag">title</h4>', unsafe_allow_html = True)
 
-st.write('<a href="#anchor_tag">click</a>', unsafe_allow_html = True)
+st.write('<a href="#anchor_tag">click</a> vecinita tiene anoto', unsafe_allow_html = True)
 
 m = st.slider('Elija el número de tiros para graficar la distribución',1,100)
 
