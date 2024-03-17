@@ -134,21 +134,21 @@ binom = np.vectorize(binom)
 data = pd.read_csv('fichas.csv')
 print(f'data:\n{data}')
 
-counts_non_sort = data['JC'].value_counts()
-counts = pd.DataFrame(np.zeros(11))
+counts_non_sort2 = data[LR,GS,DS,GM,DF,JC].value_counts()
+counts3 = pd.DataFrame(np.zeros(11))
 # print(counts)
 
-for row, value in counts_non_sort.items():
-    counts.loc[row,0] = value
+for row, value in counts_non_sort2.items():
+    counts3.loc[row,0] = value
 
-print(f'counts:\n{counts}')
-print(f'index: {counts.index.values}')
-print(f'normalized counts: {list(counts[0]/t)}')
+print(f'counts:\n{counts3}')
+print(f'index: {counts3.index.values}')
+print(f'normalized counts: {list(counts3[0]/t)}')
 
 
-fit, cov_mat = sco.curve_fit(binom,counts.index.values,counts[0]/t,[10,0.5],bounds=[(0,0),(np.inf,1)])
+fit2, cov_mat2 = sco.curve_fit(binom,counts3.index.values,counts3[0]/t,[10,0.5],bounds=[(0,0),(np.inf,1)])
 
-print(f'Fit:\n{fit}\ncov_mat\n{cov_mat}')
+print(f'Fit:\n{fit2}\ncov_mat\n{cov_mat2}')
 
 df = fit[0]
 gh = fit[1]
