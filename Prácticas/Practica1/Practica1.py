@@ -61,7 +61,7 @@ def binom(x,n,p):
 binom = np.vectorize(binom)
 
 
-data = pd.read_csv(fichas.csv')
+data = pd.read_csv('fichas.csv')
 print(f'data:\n{data}')
 
 data = data.loc[:m]
