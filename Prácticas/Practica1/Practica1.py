@@ -141,7 +141,7 @@ binom = np.vectorize(binom)
 data = pd.read_csv('fichas.csv')
 print(f'data:\n{data}')
 
-counts_non_sort = data.value_counts()
+counts_non_sort = data['JC'].value_counts()
 counts = pd.DataFrame(np.zeros(11))
 # print(counts)
 
