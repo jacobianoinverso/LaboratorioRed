@@ -114,7 +114,9 @@ st.write(binomial_plot)
 st.text('Conteo medio de caras')
 
 
+chess = sum(data['JC'])/m
 
+st.text(chess)
 
  #Grafica 1
 #
