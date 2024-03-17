@@ -46,19 +46,6 @@ st.title('Distribución de tiros de monedas')
 
 
 
-
-
-
-
-
-
-
- #Grafica 1
-#
-#
-#
-#
-
 m = st.slider('Elija el número de tiros para graficar la distribución',1,100)
 
 def binom(x,n,p):
@@ -115,26 +102,30 @@ st.write(binomial_plot)
 
 
 
-#Grafica 2 
+
+
+
+
+
+ #Grafica 1
 #
 #
 #
 #
 
+t = 600
 
-r = 600
-
-def binom(x,n,p):
+def binom(aa,df,gh):
     # print('binom(',x,n,p,')')
-    
-    x = int(x)
-    n = int(n)
+    #aa = x, df = n, gh = p, hg = q
+    aa = int(aa)
+    df = int(df)
         
-    comb = math.comb(n,x)
-    p_x = p**x
-    q_nx = (1-p)**(n-x)
+    comb = math.comb(df,aa)
+    gh_aa = gh**aa
+    hg_dfaa = (1-gh)**(df-aa)
 
-    return comb*p_x*q_nx
+    return comb*gh_aa*hg_dfaa
     # return A * scs.binom.pmf(x,n,p)
 
 binom = np.vectorize(binom)
@@ -143,7 +134,7 @@ binom = np.vectorize(binom)
 data = pd.read_csv('fichas.csv')
 print(f'data:\n{data}')
 
-counts_non_sort = data.value_counts()
+counts_non_sort = data['JC'].value_counts()
 counts = pd.DataFrame(np.zeros(11))
 # print(counts)
 
@@ -152,25 +143,40 @@ for row, value in counts_non_sort.items():
 
 print(f'counts:\n{counts}')
 print(f'index: {counts.index.values}')
-print(f'normalized counts: {list(counts[0]/r)}')
+print(f'normalized counts: {list(counts[0]/t)}')
 
 
-fit, cov_mat = sco.curve_fit(binom,counts.index.values,counts[0]/r,[10,0.5],bounds=[(0,0),(np.inf,1)])
+fit, cov_mat = sco.curve_fit(binom,counts.index.values,counts[0]/t,[10,0.5],bounds=[(0,0),(np.inf,1)])
 
 print(f'Fit:\n{fit}\ncov_mat\n{cov_mat}')
 
-n = fit[0]
-p = fit[1]
+df = fit[0]
+gh = fit[1]
 
-print(f'Este es el valor de n: {n}\nEste es el valor de p: {p}')
-
-
+print(f'Este es el valor de n: {df}\nEste es el valor de p: {gh}')
 
 
-binomial_plot2 = px.line(x=counts.index.values, y=binom(counts.index.values,n,p), title="Lanzamiento de todas las fichas")
 
-binomial_plot2.add_bar(x=counts.index.values, y=counts[0]/r, name='Lanzamientos experimentales')
+
+binomial_plot2 = px.line(x=counts.index.values, y=binom(counts.index.values,n,p), title="Lanzamiento de fichas")
+
+binomial_plot2.add_bar(x=counts.index.values, y=counts[0]/m, name='Lanzamientos experimentales')
 
 st.write(binomial_plot2)
+
+
+
+
+
+
+
+#Grafica 2 
+#
+#
+#
+#
+
+
+
 
 
