@@ -45,15 +45,25 @@ st.title('Distribución de tiros de monedas')
 
 m = st.slider('Elija el número de tiros para graficar la distribución',1,100)
 
+aa = data.loc[:m,'JC']
+
+plt.hist(x=aa, bins=intervalos, color='#F2AB6D', rwidth=0.85)
+plt.title('Histograma de tiros de monedas')
+plt.xlabel('Cantidad de caras')
+plt.ylabel('Cantidad de veces')
+plt.xticks(range(1,10))
+
+st.pyplot()
+
 data = pd.read_csv("fichas.csv")
-data = data.loc[:m,'JC']
+# data.loc[:m,'JC']
 print(f'data:\n{data}')
 
 fitted_results = ss.fit(ss.binom,data,bounds=[(0,100),(0,1)])
 print(fitted_results)
-fitted_results.plot()
+fitted_results.plt()
 st.pyplot()
 
-st.text(data)
+
 
 
