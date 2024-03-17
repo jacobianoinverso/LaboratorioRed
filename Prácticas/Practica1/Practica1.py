@@ -44,7 +44,7 @@ div[data-baseweb="base-input"] {
 
 
 
-st.title('Distribución de tiros de monedas')
+st.header('Distribución de tiros de monedas')
 
 st.write('Con ayuda de este programa, usted podrá ver los datos de 100 tiros de 10 monedas ajustarse a una distribución binomial.')
 
