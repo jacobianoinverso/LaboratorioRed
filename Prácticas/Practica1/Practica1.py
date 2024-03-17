@@ -48,7 +48,7 @@ st.header('Distribución de tiros de monedas')
 
 st.write('Con ayuda de este programa, usted podrá ver los datos de 100 tiros de 10 monedas ajustarse a una distribución binomial.')
 
-st.markdown("[Section 1](#distribución-de-tiros-de-monedas)")
+st.markdown("[Section 1](#Marco-teórico)")
 
 m = st.slider('Elija el número de tiros para graficar la distribución',1,100)
 
