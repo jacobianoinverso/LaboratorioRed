@@ -3,6 +3,5 @@ matplotlib
 numpy
 pandas
 scipy
-math
 plotly.express
 scipy.stats
