@@ -48,7 +48,10 @@ st.header('Distribución de tiros de monedas')
 
 st.write('Con ayuda de este programa, usted podrá ver los datos de 100 tiros de 10 monedas ajustarse a una distribución binomial.')
 
-st.markdown("[Section 1](#Marco-teórico)")
+st.markdown("[Más información.](#Marco-teórico)")
+
+st.markdown("[¿Cómo funciona?](#Diseño-Experimental)")
+
 
 m = st.slider('Elija el número de tiros para graficar la distribución',1,100)
 
@@ -138,7 +141,7 @@ binom = np.vectorize(binom)
 data = pd.read_csv('fichas.csv')
 print(f'data:\n{data}')
 
-counts_non_sort = data['JC'].value_counts()
+counts_non_sort = data.value_counts()
 counts = pd.DataFrame(np.zeros(11))
 # print(counts)
 
@@ -183,6 +186,7 @@ st.write(binomial_plot2)
 
 st.title('Conceptos básicos:', anchor = 'Marco-teórico')
 
+st.title('Diseño Experimental', anchor = 'Diseño-Experimental')
 
 
 
