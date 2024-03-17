@@ -1,5 +1,9 @@
-numpy
-plotly
+streamlit
 matplotlib
-scipy
+pylplot
+numpy
 pandas
+scipy
+math
+plotly.express
+scipy.stats
