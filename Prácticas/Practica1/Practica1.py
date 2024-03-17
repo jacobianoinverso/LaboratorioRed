@@ -115,8 +115,11 @@ st.text('Conteo medio de caras')
 
 
 chess = sum(data['JC'])/(m+1)
+battle = round(chess, 2)
 
-st.text(chess)
+
+
+st.text(battle)
 
  #Grafica 1
 #
