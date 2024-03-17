@@ -44,7 +44,7 @@ div[data-baseweb="base-input"] {
 
 
 
-st.header('Distribución de tiros de monedas',anchor = None)
+st.header('Distribución de tiros de monedas')
 
 st.write('Con ayuda de este programa, usted podrá ver los datos de 100 tiros de 10 monedas ajustarse a una distribución binomial.')
 
@@ -181,7 +181,8 @@ st.write(binomial_plot2)
 #
 
 
-st.title('Conceptos básicos:')
+st.title('Conceptos básicos:', anchor = '#Marco-teórico')
+
 
 
 
