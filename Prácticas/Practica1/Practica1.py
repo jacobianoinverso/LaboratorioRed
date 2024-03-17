@@ -54,19 +54,6 @@ print(fitted_results)
 fitted_results.plot()
 st.pyplot()
 
+st.text(data)
 
 
-X = 1
-Y = 2
-fig = plt.figure(figsize=(8,8))
-plt.figure(figsize=(8,8))
-plt.scatter(X[Y==0,0], X[Y==0,1], s=100, c='green', label='Cluster 1')
-plt.scatter(X[Y==1,0], X[Y==1,1], s=100, c='red', label='Cluster 2')
-plt.scatter(X[Y==2,0], X[Y==2,1], s=100, c='yellow', label='Cluster 3')
-plt.scatter(X[Y==3,0], X[Y==3,1], s=100, c='black', label='Cluster 4')
-plt.scatter(X[Y==4,0], X[Y==4,1], s=100, c='blue', label='Cluster 5')
-plt.legend()
-plt.title('Customer Groups')
-plt.xlabel('Income')
-plt.ylabel('Spending Score')
-st.pyplot(fig) # instead of plt.show()
