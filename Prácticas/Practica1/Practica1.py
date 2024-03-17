@@ -44,7 +44,9 @@ st.markdown(input_style, unsafe_allow_html=True)
 
 st.title('Distribución de tiros de monedas')
 
+st.write( '<h4 id="anchor_tag">title</h4>', unsafe_allow_html = True)
 
+st.write('<a href="#anchor_tag">click</a>', unsafe_allow_html = True)
 
 m = st.slider('Elija el número de tiros para graficar la distribución',1,100)
 
@@ -176,6 +178,8 @@ st.write(binomial_plot2)
 #
 #
 
+
+st.title('Conceptos básicos:')
 
 
 
