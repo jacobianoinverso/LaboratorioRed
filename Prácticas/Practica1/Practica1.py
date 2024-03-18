@@ -128,7 +128,7 @@ Caca = str(hediondo)
 st.text(advanced2 + '±' + Caca)
 
 
-st.text('Conteo medio teórico para ' + advanced ' caras')
+st.text('Conteo medio teórico para ' + advanced + ' caras')
 
 estoscelos = 10/2
 
