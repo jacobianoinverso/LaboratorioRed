@@ -44,7 +44,7 @@ div[data-baseweb="base-input"] {
 
 
 
-st.title('Distribución de tiros de monedas')
+st.title('Distribución de tiros de monedas', anchor='Distribución-de-tiros-de-monedas')
 
 st.write('Con ayuda de este programa, usted podrá ver los datos de 100 tiros de 10 monedas ajustarse a una distribución binomial.')
 
@@ -323,8 +323,13 @@ st.text('Cuando observamos el conteo medio de caras predicho con su incertidumbr
 st.text('En las gráficas que consciernen los 600 tiros de monedas, podemos ver que los datos\n son casi exactamente iguales a los predichos. Podemos ver también que la\ncurva de ajuste se parece mucho más a las barras que re´resnetan nuestros datos.')
 
 
+st.title('Conclusiones')
+
+st.text('Dado lo observado en la anterior práctica, podemos ver que las fórmulas para la\ndistribución binomial son casi exactas para cantidades muy grandes de tiros.')
+st.text('Pudimos observar también que para cantidades pequeñas de tiros, las fórmulas no\nson exactas, pero los datos se ajustan bien utilizando las incertidumbres\ncalculadas con las fórmulas anteriormente escritas.')
+st.text('Pudimos concluir que no sólo la distribución es acertada, sino que el promedio de caras por tiro coincide con lo predicho, con más certeza conforme más tiros se realicen.')
 
 
-
+st.markdown("[Volver arriba](#Distribución-de-tiros-de-monedas)")
 
 
