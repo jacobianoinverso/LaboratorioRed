@@ -124,7 +124,7 @@ Caca = str(Culito)
 
 
 
-st.text(advanced + '±' + Caca))
+st.text(advanced + '±' + Caca)
 
  #Grafica 1
 #
