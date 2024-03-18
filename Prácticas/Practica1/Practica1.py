@@ -111,7 +111,7 @@ st.write(binomial_plot)
 advanced = str(m)
 
 
-st.text('Conteo medio observado ' + advanced + ' caras')
+st.text('Conteo medio observado para ' + advanced + ' caras')
 
 
 
@@ -126,6 +126,29 @@ Caca = str(hediondo)
 
 
 st.text(advanced2 + '±' + Caca)
+
+
+st.text('Conteo medio teórico para ' + advanced ' caras')
+
+estoscelos = 10/2
+
+mehacen = np.sqrt(10*(1/2**2))
+
+dañome = str(estoscelos)
+
+enloquecen = str(mehacen)
+
+st.text(dañome + '±' + enloquecen)
+
+
+
+
+
+
+
+
+
+
 
  #Grafica 1
 #
