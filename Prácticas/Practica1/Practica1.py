@@ -120,11 +120,12 @@ battle = round(chess, 2)
 advanced2 = str(battle)
 
 Culito = np.std(data['JC'])
-Caca = str(Culito)
+hediondo = round(Culito, 2)
+Caca = str(hediondo)
 
 
 
-st.text(advanced + '±' + Caca)
+st.text(advanced2 + '±' + Caca)
 
  #Grafica 1
 #
