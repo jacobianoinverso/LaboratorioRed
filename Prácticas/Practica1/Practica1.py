@@ -179,7 +179,19 @@ binom = np.vectorize(binom)
 data = pd.read_csv('fichas.csv')
 print(f'data:\n{data}')
 
-counts_non_sort = data['JC'].value_counts() + data['DS'].value_counts() + data['LR'].value_counts() + data['GS'].value_counts() + data['GM'].value_counts() + data['DF'].value_counts()
+
+
+papa = data['DS'].value_counts()
+
+pepe =  data['JC'].value_counts()
+pipi = data['LR'].value_counts()
+popo = data['GS'].value_counts()
+pupu = data['GM'].value_counts()
+pápá = data['DF'].value_counts()
+
+counts_non_sort = pd.concat(papa, pepe, pipi, popo,pupu,pápá, axis=1)
+
+
 counts = pd.DataFrame(np.zeros(11))
 # print(counts)
 
