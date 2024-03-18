@@ -53,6 +53,8 @@ st.markdown("[Más información.](#Marco-teórico)")
 st.markdown("[¿Cómo funciona?](#Diseño-Experimental)")
 
 
+
+
 m = st.slider('Elija el número de tiros para graficar la distribución',1,100)
 
 def binom(x,n,p):
@@ -111,7 +113,7 @@ st.write(binomial_plot)
 advanced = str(m)
 
 
-st.text('Conteo medio observado para ' + advanced + ' caras')
+st.text('Conteo medio observado para ' + advanced + ' tiros')
 
 
 
@@ -146,8 +148,7 @@ st.text(dañome + '±' + enloquecen)
 
 
 
-
-
+st.title('Distribución para 600 tiros de 10 monedas')
 
 
 
@@ -229,3 +230,4 @@ st.title('Diseño Experimental', anchor = 'Diseño-Experimental')
 
 
 
+st.text('Conteo medio para 600 tiros')
