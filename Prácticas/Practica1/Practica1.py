@@ -291,7 +291,7 @@ st.latex(r'''\sigma=\sqrt{np(1-p)}''')
 
 st.title('Definición del problema', anchor='Definición-del-problema')
 
-st.text('Conocemos las fórmulas envueltas en la probabilidad de que al lanzar monedas, dados o paches de\npapa, pero si no salimos de la teoría, no tenemos forma de saber si las\nfórmulas aplican también a la realidad o si sólo funcionan matemáticamente.\nLanzando un grupo de monedas determinadas veces y comparando los resultados con lo esperado dadas las fórmulas, podemos comprobar\nsi estas fórmulas se adecúan a los hechos')
+st.text('Conocemos las fórmulas envueltas en la probabilidad de que al lanzar monedas, dados\no paches de papa, pero si no salimos de la teoría, no tenemos forma de saber si las\nfórmulas aplican también a la realidad o si sólo funcionan matemáticamente.\nLanzando un grupo de monedas determinadas veces y comparando los resultados con lo\nsperado dadas las fórmulas, podemos comprobar si estas fórmulas se adecúan a los hechos')
 
 
 
