@@ -313,10 +313,14 @@ st.text('2. Para reunir los datos de la segunda distribución, basta repetir el 
 st.text('3. Una vez reunidos los datos, los anotamos en una hoja de cálculo para facilitar su\ninserción en el software de estadística.')
 st.text('4. Usando las diferentes herramientas que ofrece python, podemos ordenar los datos\nobtenidos según qué tantas veces se repite cada uno de los datos')
 st.text('5. Graficando la distribución de los diferentes datos al mismo tiempo que la fórmula\nteórica, podemos comparar los datos medidos con los datos esperados.asfda')
+st.text('6. Encontramos también el conteo medio de caras tanto observadas como esperadas\npara poder ver si la fórmula representa bien el fenómeno que estamos estudiando.')
 
 
-
-
+st.title('Resultados')
+st.text('Como podemos ver en las gráficas, la fórmula de la distribución binomial describe\nbastante bien el conteo de éxitos en una cierta cantidad de tiros.')
+st.text('Podemos observar también que a medida de que la cantidad de tiros m aumenta, los\ndatos observados se acercan más y más a las predicciones hechas con la fórmula')
+st.text('Cuando observamos el conteo medio de caras predicho con su incertidumbre y\nobservamos el cambio en el conteo medio de caras observado a medida que aumentamos\nla cantidad de tiros, podemos ver que los datos medidos tienden a los datos predichos en cuanto la cantidad de tiros es mayor.')
+st.text('En las gráficas que consciernen los 600 tiros de monedas, podemos ver que los datos\n son casi exactamente iguales a los predichos. Podemos ver también que la\ncurva de ajuste se parece mucho más a las barras que re´resnetan nuestros datos.')
 
 
 
