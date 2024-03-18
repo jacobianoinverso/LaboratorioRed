@@ -255,7 +255,7 @@ st.text(ylagentelegrita + '±' + aaaaaaaaaaaaa)
 st.title('Conceptos básicos', anchor = 'Marco-teórico')
 
 st.header('Distribución binomial')
-st.text('''Cuenta el número de éxitos en una secuencia de _n_ ensayos de Bernoulli independientes entre sí con una probabilidad fija _p_ de ocurrencia de éxito entre los ensayos. Un experimento de Bernoulli se caracteriza por ser dicotómico, esto es, solo dos resultados son posibles, a uno de estos se le denomina “éxito” y tiene una probabilidad de ocurrencia _p_ y al otro se le denomina “fracaso” y tiene una probabilidad_q=1-p.''')
+st.text('''Cuenta el número de éxitos en una secuencia de n ensayos de Bernoulli \n independientes entre sí con una probabilidad fija _p_ de ocurrencia de éxito entre los ensayos. Un experimento de Bernoulli se caracteriza por ser dicotómico, esto es, solo dos resultados son posibles, a uno de estos se le denomina “éxito” y tiene una probabilidad de ocurrencia _p_ y al otro se le denomina “fracaso” y tiene una probabilidad_q=1-p.''')
 
 
 st.title('Definición del problema', anchor='Definición-del-problema')
