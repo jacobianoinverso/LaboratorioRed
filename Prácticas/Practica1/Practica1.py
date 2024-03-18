@@ -278,6 +278,8 @@ st.text('Cuando nosotros realizamos experimentos con múltiples conteos, es de e
 st.text('Tenemos dos formas de calcular incertidumbres:')
 st.text('Cuando tenemos un grupo de datos medidos independentes, usamos la desviación estandar:')
 st.latex(r'''\sigma = \sqrt{\frac{1}{N}\sum^N_{i=1}(x_i-\bar x)^2}''')
+st.text('Cuando tenemos variables dependientes y queremos sacar su incertidumbre memorizando cada fórmula\no podemos resolverlo como adultos de la forma:')
+st.latex(r'''\sigma_f=\sqrt{\sum^N_{i=1}\left(\frac{\partialf}{\partialx_i}\right)^2\sigma_{x_i}^2}''')
 
 
 
