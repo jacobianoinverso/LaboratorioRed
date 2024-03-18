@@ -179,7 +179,7 @@ binom = np.vectorize(binom)
 data = pd.read_csv('fichas.csv')
 print(f'data:\n{data}')
 
-counts_non_sort = data['JC'].value_counts()
+counts_non_sort = data['JC'].value_counts() + data['DS'].value_counts() + data['LR'].value_counts() + data['GS'].value_counts() + data['GM'].value_counts() + data['DF'].value_counts()
 counts = pd.DataFrame(np.zeros(11))
 # print(counts)
 
