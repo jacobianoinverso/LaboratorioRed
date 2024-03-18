@@ -205,7 +205,7 @@ print(f'Este es el valor de n: {df}\nEste es el valor de p: {gh}')
 
 binomial_plot2 = px.line(x=counts.index.values, y=binom(counts.index.values,n,p), title="Lanzamiento de fichas")
 
-binomial_plot2.add_bar(x=counts.index.values, y=counts[0]/m, name='Lanzamientos experimentales')
+binomial_plot2.add_bar(x=counts.index.values, y=counts[0]/t, name='Lanzamientos experimentales')
 
 st.write(binomial_plot2)
 
