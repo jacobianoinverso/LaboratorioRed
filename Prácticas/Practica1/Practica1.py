@@ -278,10 +278,10 @@ st.text('Cuando nosotros realizamos experimentos con múltiples conteos, es de e
 st.text('Tenemos dos formas de calcular incertidumbres:')
 st.text('Cuando tenemos un grupo de datos medidos independentes, usamos la desviación estandar:')
 st.latex(r'''\sigma = \sqrt{\frac{1}{N}\sum^N_{i=1}(x_i-\bar x)^2}''')
-st.text('Cuando tenemos variables dependientes y queremos sacar su incertidumbre memorizando cada fórmula\no podemos resolverlo como adultos de la forma:')
+st.text('Cuando tenemos variables dependientes y queremos sacar su incertidumbre\memorizando cada fórmula o podemos resolverlo como adultos de la forma:')
 st.latex(r'''\sigma_f=\sqrt{\sum^N_{i=1}\left(\frac{\partial f}{\partial x_i}\right)^2\sigma_{x_i}^2}''')
 
-st.text('También podemos sacar la incertidumbre de una distribución binomial con esta fórmula:')
+st.text('También podemos sacar la incertidumbre de una distribución binomial con esta\nfórmula:')
 st.latex(r'''\sigma=\sqrt{np(1-p)}''')
 
 
@@ -300,6 +300,24 @@ st.text('Conocemos las fórmulas envueltas en la probabilidad de que al lanzar m
 
 
 st.title('Diseño Experimental', anchor = 'Diseño-Experimental')
+
+st.header('Materiales')
+st.text('Monedas')
+st.text('Libreta y lapicero para anotar los datos de los tiros')
+st.text('Equipo de cómputo para facilitar los cálculos y las gráficas')
+
+st.header('Procedimiento')
+st.text('Para reunir los datos de la primera distribución, debemos tirar 100 veces un grupo\nde 10 monedas y anotar la cantidad de caras obtenida por cada tiro.')
+st.text('Para reunir los datos de la segunda distribución, basta repetir el paso anterior\notras 6 veces para ')
+st.text('Una vez reunidos los datos, los anotamos en una hoja de cálculo para facilitar su\ninserción en el software de estadística.')
+st.text('Usando las diferentes herramientas que ofrece python, podemos ordenar los datos\nobtenidos según qué tantas veces se repite cada uno de los datos')
+st.text('Graficando la distribución de los diferentes datos al mismo tiempo que la fórmula\nteórica, podemos comparar los datos medidos con los datos esperados.')
+
+
+
+
+
+
 
 
 
