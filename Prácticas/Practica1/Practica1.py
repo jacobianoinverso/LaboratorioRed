@@ -128,7 +128,7 @@ Caca = str(hediondo)
 st.text(advanced2 + '±' + Caca)
 
 
-st.text('Conteo medio teórico para ' + advanced + ' caras')
+st.text('Conteo medio teórico')
 
 estoscelos = 10/2
 
@@ -136,7 +136,9 @@ mehacen = np.sqrt(10*(1/2**2))
 
 dañome = str(estoscelos)
 
-enloquecen = str(mehacen)
+jamasaprende = round(mehacen,2)
+
+enloquecen = str(jamasaprende)
 
 st.text(dañome + '±' + enloquecen)
 
