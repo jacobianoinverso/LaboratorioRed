@@ -257,7 +257,9 @@ st.title('Conceptos básicos', anchor = 'Marco-teórico')
 st.header('Distribución binomial')
 st.text('''Cuenta el número de éxitos en una secuencia de n ensayos de Bernoulli \nindependientes entre sí con una probabilidad fija p de ocurrencia de éxito \nentre los ensayos. Un experimento de Bernoulli se caracteriza por ser dicotómico, \nesto es, solo dos resultados son posibles, a uno de estos se le denomina “éxito”\ny tiene una probabilidad de ocurrencia _p_ y al otro se le denomina “fracaso”\ny tiene una probabilidad_q=1-p.''')
 
-
+st.header('Fórmulas relevantes:')
+st.text('Distribución binomial:')
+st.latex(r'''P_b(x) = \binom{n}{x}\frac{n!}{x!(n-x)!}''')
 st.title('Definición del problema', anchor='Definición-del-problema')
 
 st.title('Diseño Experimental', anchor = 'Diseño-Experimental')
