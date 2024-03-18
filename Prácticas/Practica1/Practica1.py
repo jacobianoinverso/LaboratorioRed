@@ -235,9 +235,9 @@ ylagentelegrita = str(ylachonasemueve)
 
 nohaymejorquelachona = np.sqrt(10*(1/2**2))
 
-paralaquebradita = str(nohaymejorquelachona)
+paralaquebradita = round(nohaymejorquelachona, 2)
 
-aaaaaaaaaaaaa = round(paralaquebradita,2)
+aaaaaaaaaaaaa = str(paralaquebradita)
 
 st.text(ylachonasemueve + '±' + aaaaaaaaaaaaa)
 
