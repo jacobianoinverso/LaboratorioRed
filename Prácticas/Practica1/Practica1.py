@@ -277,7 +277,7 @@ st.text('Cuando nosotros realizamos experimentos con múltiples conteos, es de e
 
 st.text('Tenemos dos formas de calcular incertidumbres:')
 st.text('Cuando tenemos un grupo de datos medidos independentes, usamos la desviación estandar:')
-st.latex(r'''\sigma = \sqrt(\frac{1}{N}\sum^N_(i=1)(x_i-\bar x)^2)''')
+st.latex(r'''\sigma = \sqrt{\frac{1}{N}\sum^N_(i=1)(x_i-\bar x)^2}''')
 
 
 
