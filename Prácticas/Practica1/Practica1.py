@@ -327,7 +327,7 @@ st.title('Conclusiones')
 
 st.text('Dado lo observado en la anterior práctica, podemos ver que las fórmulas para la\ndistribución binomial son casi exactas para cantidades muy grandes de tiros.')
 st.text('Pudimos observar también que para cantidades pequeñas de tiros, las fórmulas no\nson exactas, pero los datos se ajustan bien utilizando las incertidumbres\ncalculadas con las fórmulas anteriormente escritas.')
-st.text('Pudimos concluir que no sólo la distribución es acertada, sino que el promedio de caras por tiro coincide con lo predicho, con más certeza conforme más tiros se realicen.')
+st.text('Pudimos concluir que no sólo la distribución es acertada, sino que el promedio\nde caras por tiro coincide con lo predicho, con más certeza conforme más\ntiros se realicen.')
 
 
 st.markdown("[Volver arriba](#Distribución-de-tiros-de-monedas)")
