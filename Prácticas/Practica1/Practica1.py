@@ -239,7 +239,7 @@ paralaquebradita = round(nohaymejorquelachona, 2)
 
 aaaaaaaaaaaaa = str(paralaquebradita)
 
-st.text(ylachonasemueve + '±' + aaaaaaaaaaaaa)
+st.text(ylagentelegrita + '±' + aaaaaaaaaaaaa)
 
 
 
