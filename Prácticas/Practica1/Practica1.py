@@ -285,7 +285,8 @@ st.text('También podemos sacar la incertidumbre de una distribución binomial c
 st.latex(r'''\sigma=\sqrt{np(1-p)}''')
 
 
-
+url2 = "https://pl.wikipedia.org/wiki/Propagacja_błędu"
+st.write("Más información [aquí.](%s)" % url2)
 
 
 
@@ -307,11 +308,11 @@ st.text('Libreta y lapicero para anotar los datos de los tiros')
 st.text('Equipo de cómputo para facilitar los cálculos y las gráficas')
 
 st.header('Procedimiento')
-st.text('Para reunir los datos de la primera distribución, debemos tirar 100 veces un grupo\nde 10 monedas y anotar la cantidad de caras obtenida por cada tiro.')
-st.text('Para reunir los datos de la segunda distribución, basta repetir el paso anterior\notras 6 veces para ')
-st.text('Una vez reunidos los datos, los anotamos en una hoja de cálculo para facilitar su\ninserción en el software de estadística.')
-st.text('Usando las diferentes herramientas que ofrece python, podemos ordenar los datos\nobtenidos según qué tantas veces se repite cada uno de los datos')
-st.text('Graficando la distribución de los diferentes datos al mismo tiempo que la fórmula\nteórica, podemos comparar los datos medidos con los datos esperados.')
+st.text('1. Para reunir los datos de la primera distribución, debemos tirar 100 veces un grupo\nde 10 monedas y anotar la cantidad de caras obtenida por cada tiro.')
+st.text('2. Para reunir los datos de la segunda distribución, basta repetir el paso anterior\notras 6 veces para ')
+st.text('3. Una vez reunidos los datos, los anotamos en una hoja de cálculo para facilitar su\ninserción en el software de estadística.')
+st.text('4. Usando las diferentes herramientas que ofrece python, podemos ordenar los datos\nobtenidos según qué tantas veces se repite cada uno de los datos')
+st.text('5. Graficando la distribución de los diferentes datos al mismo tiempo que la fórmula\nteórica, podemos comparar los datos medidos con los datos esperados.asfda')
 
 
 
