@@ -264,11 +264,9 @@ st.text('Donde x es el número de éxitos en cada caso. n, el número de tiros y
 st.text('\n\nMedia de la distribución binomial:')
 st.latex(r'''np''')
 
-st.text("Más información [aquí](https://es.wikipedia.org/wiki/Distribución_binomial)")
+url = "https://es.wikipedia.org/wiki/Distribución_binomial"
+st.write("Más información [aquí.](%s)" % url)
 
-url = "https://www.streamlit.io"
-st.write("check out this [link](%s)" % url)
-st.markdown("check out this [link](%s)" % url)
 
 
 
