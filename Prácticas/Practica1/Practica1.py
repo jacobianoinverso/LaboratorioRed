@@ -231,3 +231,17 @@ st.title('Diseño Experimental', anchor = 'Diseño-Experimental')
 
 
 st.text('Conteo medio para 600 tiros')
+
+arremangala = sum(data['JC']])/600
+
+arrempujala = round(arremangala,2)
+
+Arremangala = str(arrempujala)
+
+Arrempujala = np.std(data['JC'])
+
+arremángala = round(Arrempujala,2)
+
+arrempújala = str(arremángala)
+
+st.text(Arremangala + '±' + arrempújala)
