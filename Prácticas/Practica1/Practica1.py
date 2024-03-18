@@ -266,6 +266,14 @@ st.latex(r'''np''')
 
 st.text("Más información [aquí](https://es.wikipedia.org/wiki/Distribución_binomial)")
 
+url = "https://www.streamlit.io"
+st.write("check out this [link](%s)" % url)
+st.markdown("check out this [link](%s)" % url)
+
+
+
+
+
 st.header('Incertidumbres')
 st.text('Cuando nosotros realizamos experimentos con múltiples conteos, es de esperarse que\nlos datos observados no coincidan exactamente con las fórmulas empleadas, pero que\nno difieran por mucho de dicha fórmula.\nPara ajustar los datos observados a nuestras fórmulas, usamos incertidumbres. Estas\nincertidumbres las escribimos de la forma x̄±δx, donde x̄ es el valor medio de\nlos datos medidos y δx es la incertidumbre.')
 
