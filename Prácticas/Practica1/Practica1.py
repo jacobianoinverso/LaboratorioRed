@@ -44,11 +44,11 @@ div[data-baseweb="base-input"] {
 
 
 
-st.header('Distribución de tiros de monedas')
+st.title('Distribución de tiros de monedas')
 
 st.write('Con ayuda de este programa, usted podrá ver los datos de 100 tiros de 10 monedas ajustarse a una distribución binomial.')
 
-st.markdown("[Más información.](#Marco-teórico)")
+st.markdown("[¿Qué son estas distribuciones?](#Marco-teórico)")
 
 st.markdown("[¿Cómo funciona?](#Diseño-Experimental)")
 
@@ -252,7 +252,13 @@ st.text(ylagentelegrita + '±' + aaaaaaaaaaaaa)
 #
 
 
-st.title('Conceptos básicos:', anchor = 'Marco-teórico')
+st.title('Conceptos básicos', anchor = 'Marco-teórico')
+
+st.header('Distribución binomial')
+st.text('Cuenta el número de éxitos en una secuencia de _n_ ensayos de Bernoulli independientes entre sí con una probabilidad fija _p_ de ocurrencia de éxito entre los ensayos. Un experimento de Bernoulli se caracteriza por ser dicotómico, esto es, solo dos resultados son posibles, a uno de estos se le denomina “éxito” y tiene una probabilidad de ocurrencia _p_ y al otro se le denomina “fracaso” y tiene una probabilidad_q=1-p.')
+
+
+st.title('Definición del problema', achor='Definición-del-problema')
 
 st.title('Diseño Experimental', anchor = 'Diseño-Experimental')
 
