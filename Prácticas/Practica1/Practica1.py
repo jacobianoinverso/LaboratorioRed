@@ -263,9 +263,13 @@ st.latex(r'''P_b(x) = \binom{n}{x}\frac{n!}{x!(n-x)!}''')
 st.text('Donde x es el número de éxitos en cada caso. n, el número de tiros y p, la probabilidad de éxito de cada caso aislado.')
 st.text('\n\nMedia de la distribución binomial:')
 st.latex(r'''np''')
+
+st.text('Más información [aquí](https://es.wikipedia.org/wiki/Distribución_binomial)')
+
 st.header('Incertidumbres')
 st.text('Cuando nosotros realizamos experimentos con múltiples conteos, es de esperarse que\nlos datos observados no coincidan exactamente con las fórmulas empleadas, pero que\nno difieran por mucho de dicha fórmula.\nPara ajustar los datos observados a nuestras fórmulas, usamos incertidumbres. Estas\nincertidumbres las escribimos de la forma x̄±δx, donde x̄ es el valor medio de\nlos datos medidos y δx es la incertidumbre.')
 
+st.text('Tenemos varias formas de calcular las incertidumbres, como las siguientes:')
 
 
 
