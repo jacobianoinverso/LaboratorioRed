@@ -179,19 +179,7 @@ binom = np.vectorize(binom)
 data = pd.read_csv('fichas.csv')
 print(f'data:\n{data}')
 
-
-
-papa = data['DS'].value_counts()
-
-pepe =  data['JC'].value_counts()
-pipi = data['LR'].value_counts()
-popo = data['GS'].value_counts()
-pupu = data['GM'].value_counts()
-pápá = data['DF'].value_counts()
-
-counts_non_sort = pd.concat(papa, pepe, pipi, popo,pupu,pápá, axis=1)
-
-
+counts_non_sort = data['JC'].value_counts()
 counts = pd.DataFrame(np.zeros(11))
 # print(counts)
 
@@ -217,7 +205,7 @@ print(f'Este es el valor de n: {df}\nEste es el valor de p: {gh}')
 
 binomial_plot2 = px.line(x=counts.index.values, y=binom(counts.index.values,n,p), title="Lanzamiento de fichas")
 
-binomial_plot2.add_bar(x=counts.index.values, y=counts[0]/t, name='Lanzamientos experimentales')
+binomial_plot2.add_bar(x=counts.index.values, y=counts[0]/m, name='Lanzamientos experimentales')
 
 st.write(binomial_plot2)
 
