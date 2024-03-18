@@ -281,6 +281,10 @@ st.latex(r'''\sigma = \sqrt{\frac{1}{N}\sum^N_{i=1}(x_i-\bar x)^2}''')
 st.text('Cuando tenemos variables dependientes y queremos sacar su incertidumbre memorizando cada fórmula\no podemos resolverlo como adultos de la forma:')
 st.latex(r'''\sigma_f=\sqrt{\sum^N_{i=1}\left(\frac{\partial f}{\partial x_i}\right)^2\sigma_{x_i}^2}''')
 
+st.text('También podemos sacar la incertidumbre de una distribución binomial con esta fórmula:')
+st.latex(r'''\sigma=\sqrt{np(1-p)}''')
+
+
 
 
 
