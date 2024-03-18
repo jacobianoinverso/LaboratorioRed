@@ -255,11 +255,24 @@ st.text(ylagentelegrita + '±' + aaaaaaaaaaaaa)
 st.title('Conceptos básicos', anchor = 'Marco-teórico')
 
 st.header('Distribución binomial')
-st.text('''Cuenta el número de éxitos en una secuencia de n ensayos de Bernoulli \nindependientes entre sí con una probabilidad fija p de ocurrencia de éxito \nentre los ensayos. Un experimento de Bernoulli se caracteriza por ser dicotómico, \nesto es, solo dos resultados son posibles, a uno de estos se le denomina “éxito”\ny tiene una probabilidad de ocurrencia _p_ y al otro se le denomina “fracaso”\ny tiene una probabilidad_q=1-p.''')
+st.text('''Cuenta el número de éxitos en una secuencia de n ensayos de Bernoulli \nindependientes entre sí con una probabilidad fija p de ocurrencia de éxito \nentre los ensayos. Un experimento de Bernoulli se caracteriza por ser dicotómico, \nesto es, solo dos resultados son posibles, a uno de estos se le denomina “éxito”\ny tiene una probabilidad de ocurrencia _p_ y al otro se le denomina “fracaso”\ny tiene una probabilidad q=1-p.''')
 
 st.header('Fórmulas relevantes:')
 st.text('Distribución binomial:')
 st.latex(r'''P_b(x) = \binom{n}{x}\frac{n!}{x!(n-x)!}''')
+st.text('Donde x es el número de éxitos en cada caso. n, el número de tiros y p, la probabilidad de éxito de cada caso aislado.')
+st.text('\n\nMedia de la distribución binomial:')
+st.latex(r'''np''')
+st.header('Incertidumbres')
+st.text('Cuando nosotros realizamos experimentos con múltiples conteos, es de esperarse que los datos\nobservados no coincidan exactamente con las fórmulas empleadas, pero que no\ndifieran por mucho de dicha fórmula.\nPara ajustar los datos observados a nuestras fórmulas, usamos incertidumbres. Estas\nincertidumbres las escribimos de la forma x̄±δx, donde x̄ es el valor medio de los datos medidos y δx es la incertidumbre.')
+
+
+
+
+
+
+
+
 st.title('Definición del problema', anchor='Definición-del-problema')
 
 st.title('Diseño Experimental', anchor = 'Diseño-Experimental')
