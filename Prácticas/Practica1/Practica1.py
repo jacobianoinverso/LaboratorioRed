@@ -211,6 +211,35 @@ binomial_plot2.add_bar(x=counts.index.values, y=counts[0]/t, name='Lanzamientos 
 st.write(binomial_plot2)
 
 
+st.text('Conteo medio observado para 600 tiros')
+
+arremangala = sum(data['JC'])/600
+
+arrempujala = round(arremangala,2)
+
+Arremangala = str(arrempujala)
+
+Arrempujala = np.std(data['JC'])
+
+arremángala = round(Arrempujala,2)
+
+arrempújala = str(arremángala)
+
+st.text(Arremangala + '±' + arrempújala)
+
+st.text('Conteo medio teórico para 600 tiros')
+
+ylachonasemueve = 10/2
+
+ylagentelegrita = str(ylachonasemueve)
+
+nohaymejorquelachona = np.sqrt(10*(1/2**2))
+
+paralaquebradita = str(nohaymejorquelachona)
+
+aaaaaaaaaaaaa = round(paralaquebradita,2)
+
+st.text(ylachonasemueve + '±' + aaaaaaaaaaaaa)
 
 
 
@@ -230,18 +259,4 @@ st.title('Diseño Experimental', anchor = 'Diseño-Experimental')
 
 
 
-st.text('Conteo medio para 600 tiros')
 
-arremangala = sum(data['JC'])/600
-
-arrempujala = round(arremangala,2)
-
-Arremangala = str(arrempujala)
-
-Arrempujala = np.std(data['JC'])
-
-arremángala = round(Arrempujala,2)
-
-arrempújala = str(arremángala)
-
-st.text(Arremangala + '±' + arrempújala)
