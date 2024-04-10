@@ -38,4 +38,4 @@ div[data-baseweb="base-input"] {
 """
 
 
-st.markdown(:rainbow["ufoporno"])
+st.markdown("Θέλω μία πόρνη")
