@@ -9,4 +9,4 @@ from scipy import stats as ss
 
 
 
-st.markdown("Θέλω μία πόρνη")
+st.markdown("Predicción de casos confirmados de COVID-19")
