@@ -6,7 +6,7 @@ from scipy import optimize as sco
 import math
 import plotly.express as px
 from scipy import stats as ssτ
-
+from scipy import special as ssp
 
 
 st.title("Predicción de casos confirmados de COVID-19")
