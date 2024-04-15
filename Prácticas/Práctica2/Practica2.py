@@ -9,4 +9,6 @@ from scipy import stats as ss
 
 
 
-st.markdown("Predicción de casos confirmados de COVID-19")
+st.title("Predicción de casos confirmados de COVID-19")
+
+st.text("Basándose en datos obetnidos de los primeros casos, este programa permite predecir aproximadamente cuándo tendrá un pico la pandemia y más o menos cuándo empezarán a disminuir los casos confirmados.")
