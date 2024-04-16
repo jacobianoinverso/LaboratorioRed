@@ -11,9 +11,12 @@ from scipy import special as ssp
 
 st.title("Predicción de casos confirmados de COVID-19")
 
-st.write("Jacobo Ponce\nCésar García")
+st.write("Jacobo Ponce")
+st.write("César García")
 
-st.write("En este proyecto, haremos una prueba para saber qué tan acertado es aplicar la distribución binomial, de análisis probabilístico, para predecir la propagación de una enfermedad, tomando en cuenta los datos de las personas con resultados positivos para la prueba de covid.19.")
+st.write("En este proyecto, haremos una prueba para saber qué tan acertado es aplicar la distribución binomial, de análisis probabilístico, para predecir la propagación de una enfermedad, tomando en cuenta los datos de las personas con resultados positivos para la prueba de covid-19.")
+st.write("Tomaremos los datos de los casos confirmados en Guatemala en un periodo de tiempo inicial, haremos una predicción y veremos qué tanto concuerda con los datos reales de los periodos siguientes de tiempo.")
+st.write("Esto nos ayudará a entender si estos métodos son fiables para usarse en caso de haber enfermedades similares en el futuro o si tendremos que optar por métodos diferentes que represneten mejor la curva de contagios.")
 
 
 
