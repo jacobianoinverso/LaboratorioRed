@@ -20,7 +20,7 @@ st.write("Esto nos ayudará a entender si estos métodos son fiables para usarse
 
 st.title("Conceptos Generales")
 st.header("Covid-19")
-st.write("Mejor conocido como SRAS-CoV-2, que quiere decir coronavirus causante del síndrome respiratorio agudo severo de segundo tipo, es un tipo de coronavirus que, debido a su expansión a nivel mundial, porovocó una pandemia. Fue aislado por primera vez en Wuhan, China y se originó por un huesped animal.")
+st.write("Enfermedad causada a finales de 2019 por el virus SRAS-CoV-2, que quiere decir coronavirus causante del síndrome respiratorio agudo severo de segundo tipo. Debido a su expansión a nivel mundial, provocó una pandemia. Fue aislado por primera vez en Wuhan, China y se originó por un huesped animal.")
 st.header("Distribución binomial")
 st.write("Es el método de análisis estadístico que emplearemos en este trabajo.")
 st.write("Con ayuda de ésta, podemos encontrar la probabilidad de un número de aciertos en n intentos de Bernopulli, donde cada uno de estos tiene una probabilidad p de éxito, donde p es un número entre 0 y 1 y consideramos también la variable q, la probabilidad de fracasos, que se expresa como q=1-p.")
@@ -102,3 +102,7 @@ st.write("Vale la pena notar también la forma de campana que poseen los otros d
 
 st.title("Conclusiones")
 st.write("Las gráficas expuestas anteriormente nos mostraron que la gráfica de la distribución binomial no es una forma muy exacta de predecir olas epidemiológicas generales como las causadas por todas las cepas juntas del COVID-19, ya que no toma en cuenta cosas como las diferentes cepas que pueda tener la enfermedad como las posibles recaídas por parte de los pacientes después de haber mostrado síntomas de mejora. Sin embargo, como pudimos ver, la segunda gráfica tiene más de un pico, lo que significa que las distribuciones binomiales podrían ser una mejor herramienta de estudio si los exámenes para recavar estos datos fueran más exhaustivos e identificaran las diferentes cepas en lugar de sólo identificar si alguno de los antígenos está presente en el organismo. De hacerse así, se podría hacer una distribución por cada cepa para poder aproximar el pico y el final de cada una de estas.")
+
+st.title("Bibliografía")
+pollocampero = "https://www.who.int/es/emergencies/diseases/novel-coronavirus-2019"
+st.write("[Brote de enfermedad por coronavirus](%s) - Organización Mundial de la Salud" %pollocampero)
