@@ -46,3 +46,14 @@ fitfit.add_bar(x=conf_fecha.index, y=conf_fecha["confirmacion"])
 st.plotly_chart(fitfit)
 
 
+caldodepollo = pd.read_csv('confirmados_fecha.csv')
+
+caldodepollo = caldodepollo.loc[0:384
+                            ]
+caldodepollo = pd.DataFrame(caldodepollo
+)
+
+caldoderes = px.line(x=value_range, y=fit(value_range))
+caldoderes.add_bar(x=caldodepollo.index, y=caldodepollo["confirmacion"])
+
+st.plotly_chart(caldoderes)
