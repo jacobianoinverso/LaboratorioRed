@@ -16,7 +16,7 @@ st.text("Basándose en datos obetnidos de los primeros casos, este programa perm
 
 
 
-conf_fecha = pd.read_csv('confirmados_fecha.csv',header=None)
+conf_fecha = pd.read_csv('confirmados_fecha.csv')
 
 conf_fecha = conf_fecha.loc[0:50]
 conf_fecha = pd.DataFrame(conf_fecha)
@@ -36,5 +36,5 @@ value_range = np.arange(200)
 fitfit= px.line(x=value_range, y=fit(value_range))
 st.plotly_chart(fitfit)
 
-fitfit.add_bar(x=conf_fecha.index, y=conf_fecha["0"])
+fitfit.add_bar(x=conf_fecha.index, y=conf_fecha["confirmacion"])
 
