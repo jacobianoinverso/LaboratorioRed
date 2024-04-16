@@ -32,3 +32,4 @@ def fit(x):
 fit = np.vectorize(fit)
 value_range = np.arange(100)
 fitfit= px.line(x=value_range, y=fit(value_range))
+st.plotly_chart(fitfit)
