@@ -32,8 +32,9 @@ st.text('\n\nMedia de la distribución binomial:')
 st.latex(r'''np''')
 
 st.title("Planteamiento del problema")
-st.write("A simples rasgos, podemos pensar en la expansión de una enfermedad como una binomial invertida; se empieza con pocos, casi nulos casos confirmados, luego existe un crecimiento exponencial, llega a un pico de casos y, conforme la gente va falleciendo o se va recuperando, los siguientes casos van disminuyendo. Es por eso que hemos optado por intentar hacer una predicción de estos datos usando una distribución binomial, ya que conforme aumenta el número de éxitos, aumenta exponencialmente la probabilidad hasta llegar a un pico, para después disminuir.")
+st.write("A simples rasgos, podemos pensar en la expansión de una enfermedad como una binomial invertida; se empieza con pocos, casi nulos casos confirmados, luego existe un crecimiento exponencial, llega a un pico de casos y, conforme la gente va falleciendo o se va recuperando, la cantidad de casos va disminuyendo. Es por eso que hemos optado por intentar hacer una predicción de estos datos usando una distribución binomial, ya que en esta, conforme aumenta el número de éxitos, aumenta exponencialmente la probabilidad hasta llegar a un pico, para después disminuir.")
 st.write("Como no estaremos trabajando con probailidades y éxitos, haremos los ejes de la gráfica de la siguiente forma: en el eje x, que tradicionalmente es para el número de éxitos, vamos a representar las fechas en orden. En el eje y, que tradicionalmente se usa para representar la probabilidad, vamos a representar el número de casos confirmados que hubo en cada día.")
+st.writer("Una vez representados de esta forma estos datos, vamos a insertar nuestra lista de datos en el software de machine learning GnuPlot para que nos devuelva una predicción de esta curva. Con esta predicción, podremos saber aproximadamente cuándo tendremos un pico de casos y en qué fechas aproximadamente irá disminuyendo el número diario de contagios.")
 
 
 
