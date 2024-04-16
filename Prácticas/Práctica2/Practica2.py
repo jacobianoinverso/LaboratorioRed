@@ -38,4 +38,4 @@ st.plotly_chart(fitfit)
 
 fitfit.add_bar(x=conf_fecha.index, y=conf_fecha[4])
 
-print(conf_fecha[4])
+print(conf_fecha['4'])
