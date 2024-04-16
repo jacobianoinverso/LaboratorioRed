@@ -18,7 +18,7 @@ st.text("Basándose en datos obetnidos de los primeros casos, este programa perm
 
 conf_fecha = pd.read_csv('confirmados_fecha.csv')
 
-conf_fecha = conf_fecha.loc[0:97]
+conf_fecha = conf_fecha.loc[0:50]
 conf_fecha = pd.DataFrame(conf_fecha)
 print(conf_fecha)
 
