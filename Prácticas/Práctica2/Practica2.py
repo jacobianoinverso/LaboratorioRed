@@ -34,4 +34,4 @@ value_range = np.arange(200)
 fitfit= px.line(x=value_range, y=fit(value_range))
 st.plotly_chart(fitfit)
 
-fitfit.add_bar(x=conf_fecha.index, y=conf_fecha['0'])
+fitfit.add_bar(x=conf_fecha.index, y=conf_fecha['4'])
