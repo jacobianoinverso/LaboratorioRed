@@ -15,8 +15,28 @@ st.write("Jacobo Ponce")
 st.write("César García")
 
 st.write("En este proyecto, haremos una prueba para saber qué tan acertado es aplicar la distribución binomial, de análisis probabilístico, para predecir la propagación de una enfermedad, tomando en cuenta los datos de las personas con resultados positivos para la prueba de covid-19.")
-st.write("Tomaremos los datos de los casos confirmados en Guatemala en un periodo de tiempo inicial, haremos una predicción y veremos qué tanto concuerda con los datos reales de los periodos siguientes de tiempo.")
+st.write("Tomaremos los datos de los casos confirmados en Guatemala en un periodo de tiempo inicial, haremos una predicción con el software GnuPlot y veremos qué tanto concuerda con los datos reales de los periodos siguientes de tiempo.")
 st.write("Esto nos ayudará a entender si estos métodos son fiables para usarse en caso de haber enfermedades similares en el futuro o si tendremos que optar por métodos diferentes que represneten mejor la curva de contagios.")
+
+st.title("Conceptos Generales")
+st.header("Covid-19")
+st.write("Mejor conocido como SRAS-CoV-2, que quiere decir coronavirus causante del síndrome respiratorio agudo severo de segundo tipo, es un tipo de coronavirus que, debido a su expansión a nivel mundial, porovocó una pandemia. Fue aislado por primera vez en Wuhan, China y se originó por un huesped animal.")
+st.header("Distribución binomial")
+st.write("Es el método de análisis estadístico que emplearemos en este trabajo.")
+st.write("Con ayuda de ésta, podemos encontrar la probabilidad de un número de aciertos en n intentos de Bernopulli, donde cada uno de estos tiene una probabilidad p de éxito, donde p es un número entre 0 y 1 y consideramos también la variable q, la probabilidad de fracasos, que se expresa como q=1-p.")
+st.header('Fórmulas relevantes:')
+st.text('Distribución binomial:')
+st.latex(r'''P_b(x) = \binom{n}{x}\frac{n!}{x!(n-x)!}''')
+st.text('Donde x es el número de éxitos en cada caso. n, el número de tiros y p, la probabilidad de éxito de cada caso aislado.')
+st.text('\n\nMedia de la distribución binomial:')
+st.latex(r'''np''')
+
+
+
+
+
+
+
 
 
 
@@ -57,3 +77,4 @@ caldoderes = px.line(x=value_range, y=fit(value_range))
 caldoderes.add_bar(x=caldodepollo.index, y=caldodepollo["confirmacion"])
 
 st.plotly_chart(caldoderes)
+
