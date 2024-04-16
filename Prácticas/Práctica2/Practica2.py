@@ -72,6 +72,18 @@ fitfit.add_bar(x=conf_fecha.index, y=conf_fecha["confirmacion"])
 st.plotly_chart(fitfit)
 
 
+st.write("Como podemos ver, la gráfica de la distribución binomial se ajusta bastante bien a los pocos valores que introducimos. Como se detectó un aparente pico el 19 de mayo y los casos empezaron a disminuir desde entonces, la gráfica predijo que en cosa de dos o tres meses, los casos confirmados iban a ser muy bajos si no nulos.")
+
+
+
+
+
+
+
+
+
+
+
 caldodepollo = pd.read_csv('confirmados_fecha.csv')
 
 caldodepollo = caldodepollo.loc[0:384
@@ -84,3 +96,5 @@ caldoderes.add_bar(x=caldodepollo.index, y=caldodepollo["confirmacion"])
 
 st.plotly_chart(caldoderes)
 
+st.write("Con los datos de esta segunda gráfica, que incluye los datos de muchas más fechas, podemos ver que no sólo los datos no disminuyeron según lo predicho por el programa, sino aumentaron significativamente en las fechas posteriores.")
+st.write("Este error en la predicción se debe a que no se tomaron en cuenta cosas como las recaídas después de los tratamientos, las nuevas cepas junto con lo fuertes y efectivas que fueron, ")
