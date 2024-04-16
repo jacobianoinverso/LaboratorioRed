@@ -97,4 +97,9 @@ caldoderes.add_bar(x=caldodepollo.index, y=caldodepollo["confirmacion"])
 st.plotly_chart(caldoderes)
 
 st.write("Con los datos de esta segunda gráfica, que incluye los datos de muchas más fechas, podemos ver que no sólo los datos no disminuyeron según lo predicho por el programa, sino aumentaron significativamente en las fechas posteriores.")
-st.write("Este error en la predicción se debe a que no se tomaron en cuenta cosas como las recaídas después de los tratamientos, las nuevas cepas junto con lo fuertes y efectivas que fueron, ")
+st.write("Este error en la predicción se debe a que no se tomaron en cuenta cosas como las recaídas después de los tratamientos, las nuevas cepas junto con lo fuertes y efectivas que fueron.")
+st.write("Vale la pena notar también la forma de campana que poseen los otros dos picos presentes en la gráfica, lo que sugiere que tal vez podría funcionar como una buena aproximación, pero sólo por cepa y no por la enfermedad completa.")
+
+st.title("Conclusiones")
+st.write("Las gráficas expuestas anteriormente nos mostraron que la gráfica de la distribución binomial no es una forma muy exacta de predecir olas epidemiológicas generales como las causadas por todas las cepas juntas del COVID-19, ya que no toma en cuenta cosas como las diferentes cepas que pueda tener la enfermedad como las posibles recaídas por parte de los pacientes después de haber mostrado síntomas de mejora. Sin embargo, como pudimos ver, la segunda gráfica tiene más de un pico, lo que significa que las distribuciones binomiales podrían ser una mejor herramienta de estudio si los exámenes para recavar estos datos fueran más exhaustivos e identificaran las diferentes cepas en lugar de sólo identificar si alguno de los antígenos está presente en el organismo. De hacerse así, se podría hacer una distribución por cada cepa para poder aproximar el pico y el final de cada una de estas.")
+st.write("
