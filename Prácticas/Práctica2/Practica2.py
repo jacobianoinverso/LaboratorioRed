@@ -106,3 +106,5 @@ st.write("Las gráficas expuestas anteriormente nos mostraron que la gráfica de
 st.title("Bibliografía")
 pollocampero = "https://www.who.int/es/emergencies/diseases/novel-coronavirus-2019"
 st.write("[Brote de enfermedad por coronavirus](%s) - Organización Mundial de la Salud" %pollocampero)
+pollopinulito = "https://www.fxsolver.com/browse/formulas/Binomial+distribution"
+st.write("[Binomial distribution formula calculator](%s) - fxsolver.com" %pollopinulito)
