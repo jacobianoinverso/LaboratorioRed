@@ -22,33 +22,13 @@ print(conf_fecha)
 
 
 
-def binom(x,n,p):
-    print('binom(',x,n,p,')')
-    
-    # x = int(x)
-    # n = int(n)
-        
-    comb = ssp.comb(n,x)
-    p_x = p**x
-    q_nx = (1-p)**(n-x)
+def fit(x):
+    A=  298.667
+    u= 89.8887
+    r =  8.41914
+    x=x
+    return A*math.exp(-((x-u)/r)**2/2)
 
-    return comb*p_x*q_nx
-    # return A * scs.binom.pmf(x,n,p)
-
-fit, cov_mat = sco.curve_fit(binom,conf_fecha.index.values,conf_fecha['sintomas'],bounds=[(0,0),(np.inf,1)],p0=[200,0.8])
-
-print(f'Fit:\n{fit}\ncov_mat\n{cov_mat}')
-
-n = fit[0]
-p = fit[1]
-
-print(f'Este es el valor de n: {n}\nEste es el valor de p: {p}')
-
-
-
-
-binomial_plot = px.line(x=conf_fecha.index.values, y=binom(conf_fecha.index.values,n,p), title="Lanzamiento de fichas")
-
-binomial_plot.add_bar(x=conf_fecha.index.values, y=conf_fecha['sintomas']/conf_fecha['sintomas'].sum(), name='Lanzamientos experimentales')
-
-binomial_plot.show()
+fit = np.vectorize(fit)
+value_range = np.arrange(100)
+fitfit= px.line(x=value_range, y=fit(value_range))
