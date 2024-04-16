@@ -30,6 +30,7 @@ def fit(x):
     return A*math.exp(-((x-u)/r)**2/2)
 
 fit = np.vectorize(fit)
-value_range = np.arange(250)
+value_range = np.arange(20
+                        0)
 fitfit= px.line(x=value_range, y=fit(value_range))
 st.plotly_chart(fitfit)
