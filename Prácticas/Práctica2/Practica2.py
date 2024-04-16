@@ -43,7 +43,7 @@ st.write("Una vez representados de esta forma estos datos, vamos a insertar nues
 st.write("Cuando tengamos los datos iniciales graficados junto con la predicción, compararemos esta predicción con los datos reales para ver qué tanto concuerdan.")
 
 
-
+st.title("Resultados")
 
 
 
