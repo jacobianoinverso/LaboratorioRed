@@ -32,7 +32,7 @@ def fit(x):
     return A*math.exp(-((x-u)/r)**2/2)
 
 fit = np.vectorize(fit)
-value_range = np.arange(200)
+value_range = np.arange(250)
 fitfit= px.line(x=value_range, y=fit(value_range))
 fitfit.add_bar(x=conf_fecha.index, y=conf_fecha["confirmacion"])
 
