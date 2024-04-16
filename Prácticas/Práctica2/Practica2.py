@@ -11,7 +11,9 @@ from scipy import special as ssp
 
 st.title("Predicción de casos confirmados de COVID-19")
 
-st.text("Basándose en datos obetnidos de los primeros casos, este programa permite predecir\naproximadamente cuándo tendrá un pico la pandemia y más o menos cuándo\nempezarán a disminuir los casos confirmados.")
+st.write("Jacobo Ponce\nCésar García")
+
+st.write("En este proyecto, haremos una prueba para saber qué tan acertado es aplicar la distribución binomial, de análisis probabilístico, para predecir la propagación de una enfermedad, tomando en cuenta los datos de las personas con resultados positivos para la prueba de covid.19.")
 
 
 
