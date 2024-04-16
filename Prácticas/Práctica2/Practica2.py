@@ -26,9 +26,9 @@ print(conf_fecha)
 
 
 def fit(x):
-    A=  298.667
-    u= 89.8887
-    r =  8.41914
+    A=  475.56
+    u= 88.751 
+    r =  6.43244
     x=x
     return A*math.exp(-((x-u)/r)**2/2)
 
