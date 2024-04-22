@@ -19,3 +19,4 @@ pmf = binom.pmf(x, n, p)
 st.write(pmf)
 
 pollo = list(pmf)
+st.plotly_chart(pollo)
