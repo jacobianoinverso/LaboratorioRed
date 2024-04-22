@@ -16,9 +16,9 @@ n = st.number_input('Inserte el número de tiros n\n', min_value=1, max_value=10
 p = st.number_input('Inserte la posibilidad de éxito p\n', min_value=0.01, max_value=1.00, step=0.01, value=0.50, help='insertar un valor entre 0 y 1')
 
 x = np.arange(0, n+1)
-pmf = binom.pmf(x, n, p)  
+pmf = binom.pmf(x, n, p)      #calculamos la distribución binomial para todos los x con los datos dados por el usuario  
 st.write(pmf)
 fitfit= px.line(x=0, y=0)
-fitfit.add_bar(x=x, y=pmf)
+fitfit.add_bar(x=x, y=pmf)           #Graficamos los datos obtenidos
 
 st.plotly_chart(fitfit)
