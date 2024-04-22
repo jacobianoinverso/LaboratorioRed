@@ -17,6 +17,7 @@ p = st.number_input('Inserte la posibilidad de éxito p\n', min_value=0.01, max_
 x = np.arange(0, n+1)
 pmf = binom.pmf(x, n, p)  
 st.write(pmf)
+fitfit= px.line(x=0, y=0)
+fitfit.add_bar(x=x, y=pmf)
 
-pollo = list(pmf)
-st.plotly_chart(pollo)
+st.plotly_chart(fitfit)
