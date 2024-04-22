@@ -18,5 +18,4 @@ x = np.arange(0, n+1)
 pmf = binom.pmf(x, n, p)  
 st.write(pmf)
 
-porno = (1,2, 3,4,5,6)
-st.write(porno)
+pollo = list(pmf)
