@@ -4,6 +4,7 @@ import seaborn as sns
 import streamlit as st
 from scipy import stats as sts
 from scipy.stats import binom
+import plotly.express as px
 st.title('Graficadora de distribuciones binomiales')
 st.write('He aquí una herramienta que permite representar de forma gráfica la probabilidad de que un suceso tenga éxito en repetidas ocasiones.')
 
