@@ -16,8 +16,4 @@ p = st.number_input('Inserte la posibilidad de éxito p\n', min_value=0.01, max_
 
 x = np.arange(0, n+1)
 pmf = binom.pmf(x, n, p)  
-plt.bar(x, pmf)  
-plt.xlabel('Number of Heads')  
-plt.ylabel('Probability')  
-plt.title('Binomial Distribution - Coin Flips')  
-plt.show()  
+st.plotly_chart(pmf)
