@@ -17,14 +17,12 @@ st.write("En este experimento, vamos a analizar la cantidad de partículas en el
 st.title("Conceptos generales")
 st.header("Isótopos radiactivos")
 st.write("También llamados radioisótopos, entre otros nombres, son átomos que tienen un exceso de energía, lo que los vuelve inestables. Esta energía se discipa de tres maneras; puede emitirse desde el núcleo (radiación γ), puede transferirse a uno de sus electrones para ser liberado como un electrón de conversión interna o puede ser usada para crear y emitir una partícula nueva (llamada partícula α ο β).")
+st.write("Los radioisótopos se representan con el nombre del elemento, acompañado del número total de protones y neutrones en su núcleo.")
+st.write("El isótopo que estudiaremos hoy, el cesio-137, recibe su nombre del hecho de que su núcleo se conforma ed 55 protones y 82 neutrones.")
 
-
-
-
-
-
-
-
+st.header("Cesio-137")
+st.write("Es uno de los isótopos más estables de cesio. Se obtiene de forma sintética a partir de fisión nuclear. El Cesio-137 es un emisor beta, el 94,6 por ciento se desintegra en Ba-137m y el resto directamente en Ba-137 que es estable. La energía de los fotones de Ba-137m es 661,7 keV. Estos fotones pueden ser utilizados en la irradiación de los alimentos, o de la radioterapia en el cáncer. Cs-137 es menos utilizado para la radiografía industrial que otros isótopos gamma. Se puede encontrar en algunos medidores de humedad y de densidad, medidores de flujo, sensores y otros equipos.")
 
 st.header("Distribución Gaussiana")
 st.write("También llamada distribución normal, es una distribución probabilística de variable continua simétrica con respecto a un parámetro. Por ls forma acampanada de su función de densidad, se le suele llamar campana de Gauss. Es ampliamente usada porque permite modelar diversos fenómenos incluso de ramas de estudio diferentes.")
+st.header("Fórmulas relevantes")
