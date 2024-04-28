@@ -31,3 +31,36 @@ st.write("También llamada distribución normal, es una distribución probabilí
 st.header("Fórmulas relevantes")
 st.write("Densidad de probabilidad")
 st.latex(r'''pdf = \frac{1}{\sigma\sqrt{2\pi}}e^{-\frac{(x-\mu)^2}{2\sigma^2}}''')
+st.write("Función de distribución de probabilidad")
+st.latex(r'''cdf?\frac{1}{2}\left[1+erf\left(\frac{x-\mu}{\sigma\sqrt{2}}\right)\right]''')
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
