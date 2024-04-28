@@ -42,7 +42,7 @@ st.write("Función de probabilidad")
 st.latex(r'''fp=\frac{e^{-\lambda}\lambda^k}{k!}''')
 
 st.write("Función de distribución")
-st.latex(r'''cdf = \frac{\Gamma(\lfloork+1\rfloor,\lambda)}{\lfloor k\rfloor!}''')
+st.latex(r'''cdf = \frac{\Gamma(\lfloor k+1\rfloor,\lambda)}{\lfloor k\rfloor!}''')
 
 
 
