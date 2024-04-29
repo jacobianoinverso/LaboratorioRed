@@ -183,7 +183,7 @@ st.write("Como podemos observar, al tener más datos, las curvas se ajustan de m
 st.write("Podemos ver también que, aunque no sea tan precisa (en lo que cabe, ya que ninguna curva va a describir a la perfección un fenómeno) como la prueba de χ cuadrado de los datos de aire, sigfue siendo más acertada que la curva gaussiana.")
 
 st.title("Conclusiones")
-st-write("Las pruebas de χ cuadrado hechas para los ajustes gaussiano y de Poisson para los dos grupos de datos estudiados (cantidad de partículas en el aire y cantidad de partículas emitidas por una muestra de cesio-137)")
+st.write("Las pruebas de χ cuadrado hechas para los ajustes gaussiano y de Poisson para los dos grupos de datos estudiados (cantidad de partículas en el aire y cantidad de partículas emitidas por una muestra de cesio-137)")
 
 
 
