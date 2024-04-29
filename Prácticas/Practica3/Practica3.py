@@ -83,6 +83,11 @@ st.plotly_chart(fig)
 st.write("Estos son los mismos datos, pero ajustados a la distribución de Poisson")
 
 
+st.write(fitaire(value_range, *params))
+st.write(fitaire(value_range, *params)+aigre["count"])
+
+
+
 def load_data(file_path):
     return pd.read_csv(file_path, header=None, names=['data'])
 data = load_data("chuchitosdeaire.csv")
