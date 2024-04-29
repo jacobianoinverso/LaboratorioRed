@@ -57,6 +57,7 @@ fit = np.vectorize(fit)
 value_range = np.arange(150
                         )
 fitfit= px.line(x=value_range, y=fit(value_range))
+st.plotly_chart(fitfit)
 
 
 
