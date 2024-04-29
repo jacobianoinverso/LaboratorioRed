@@ -59,18 +59,25 @@ st.plotly_chart(fig)
 
 
 
-pinulito2 = pd.read_csv('chuchitosdecesio.csv')
-pinulito = pinulito2.value_counts().sort_index().reset_index()
-pinulito.columns = ['value', 'count']
-def fitaire(x, A, u, r):
-    return A * np.exp(-((x - u) / r)**2 / 2)
-guess2 = (445.463, -522.646,  4815.97)
-params2, _ = sco.curve_fit(fitaire, pinulito['value'], pinulito['count'], p0=guess2)
-value_range2 = np.arange(pinulito['value'].min(), pinulito['value'].max() + 1)
-fig2 = px.bar(x=pinulito['value'], y=pinulito['count'], labels={'x': 'Value', 'y': 'Count'}, title='Histograma de Valores')
-fig2.add_scatter(x=value_range2, y=fitaire(value_range2, *params2), mode='lines', name='Curva ajustada')
-st.plotly_chart(fig2)
+aigre3 = pd.read_csv('chuchitosdeaire.csv', header=None, names=['value'], delimiter=',')
 
+aigre_counts = aigre3['value'].value_counts().sort_index().reset_index()
+aigre_counts.columns = ['value', 'count']
+
+def fit_poisson(x, lam):
+    return (np.exp(-lam) * np.power(lam, x)) / np.math.factorial(x)
+
+lam_guess = 100
+
+params2, _ = sco.curve_fit(fit_poisson, aigre_counts['value'], aigre_counts['count'], p0=[lam_guess])
+
+value_range2 = np.arange(aigre_counts['value'].min(), aigre_counts['value'].max() + 1)
+
+fig = px.bar(x=aigre_counts['value'], y=aigre_counts['count'], labels={'x': 'Value', 'y': 'Count'}, title='Histograma de Valores')
+
+fig.add_scatter(x=value_range2, y=fit_poisson(value_range2, *params2), mode='lines', name='Curva ajustada (Poisson)')
+
+st.plotly_chart(fig)
 
 
 
