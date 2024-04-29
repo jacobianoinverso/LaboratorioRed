@@ -154,3 +154,42 @@ correlation matrix of the fit parameters:
 A               1.000 
 u              -1.000  1.000 
 r               0.999 -1.000  1.000 
+
+
+*******************************************************************************
+Sun Apr 28 19:00:40 2024
+
+
+FIT:    data read from 'chuchitosdeaire.csv' using 0:1 every :::0::d
+        format = x:z
+        x range restricted to [0.00000 : 20.0000]
+        #datapoints = 21
+        residuals are weighted equally (unit weight)
+
+function used for fitting: f(x)
+	f(x) = A*exp(-((x-u)/r)**2/2)
+fitted parameters initialized with current variable values
+
+iter      chisq       delta/lim  lambda   A             u             r            
+   0 8.5453810380e+04   0.00e+00  2.03e+02    4.000000e+02   2.000000e+02   1.000000e+02
+ 906 7.5547343375e+01  -7.47e-01  2.03e-01    4.333721e+02  -2.623054e+02   8.569696e+01
+
+After 906 iterations the fit converged.
+final sum of squares of residuals : 75.5473
+rel. change during last iteration : -7.46923e-06
+
+degrees of freedom    (FIT_NDF)                        : 18
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 2.04868
+variance of residuals (reduced chisquare) = WSSR/ndf   : 4.19707
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+A               = 433.372          +/- 1.555e+05    (3.587e+04%)
+u               = -262.305         +/- 1.932e+04    (7365%)
+r               = 85.697           +/- 2997         (3497%)
+
+correlation matrix of the fit parameters:
+                A      u      r      
+A               1.000 
+u              -1.000  1.000 
+r               1.000 -1.000  1.000 

@@ -7,9 +7,9 @@ d=0
 
 f(x) = A*exp(-((x-u)/r)**2/2)
 
-A=100
-u=50
-r=25
+A=400
+u=200
+r=100
 
 fit f(x) 'chuchitosdeaire.csv' using 0:1 every :::0::d via A,u,r
 
