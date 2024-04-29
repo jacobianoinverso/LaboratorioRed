@@ -172,7 +172,7 @@ st.plotly_chart(fig)
 pinky = fitgaussian(value_range2, *paramsa)
 
 chipuyu = sum(pinky) / 250
-chipuyu str(chipuyu)
+chipuyu = str(chipuyu)
 
 st.write("Cuya prueba de χ cuadrado devuelve un valor de " + chipuyu)
 
