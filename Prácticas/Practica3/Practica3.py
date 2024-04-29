@@ -53,7 +53,7 @@ st.write("La prueba de Pearson consiste en hacer dos hipótesis y si el valor de
 st.title("Fórmulas relevantes")
 
 st.write("Fórmula de distribución de probabilidad de Pearson")
-st.latex(r'''\chi^2?\sum^{k}_{i=1}\frac{(x_i-m_i)^2}{m_i}=\sum^k_{i=1}\frac{x_i^2}{m_i}-n''')
+st.latex(r'''\chi^2=\sum^{k}_{i=1}\frac{(x_i-m_i)^2}{m_i}=\sum^k_{i=1}\frac{x_i^2}{m_i}-n''')
 
 
 
