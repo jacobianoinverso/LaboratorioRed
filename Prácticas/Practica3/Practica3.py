@@ -59,6 +59,20 @@ st.plotly_chart(fig)
 
 
 
+aigre2 = pd.read_csv('chuchitosdeaire.csv')
+aigre = aigre2.value_counts().sort_index().reset_index()
+aigre.columns = ['value', 'count']
+def fit_poisson(x, lmbda):
+    return (lmbda**x) * np.exp(-lmbda) / np.math.factorial(x)
+lambda_guess = np.mean(aigre['value'])
+value_range = np.arange(aigre['value'].min(), aigre['value'].max() + 1)
+params, _ = sco.curve_fit(fit_poisson, aigre['value'], aigre['count'], p0=[lambda_guess])
+fig = px.bar(x=aigre['value'], y=aigre['count'], labels={'x': 'Value', 'y': 'Count'}, title='Histograma de Valores')
+poisson_values = fit_poisson(value_range, *params)
+fig.add_scatter(x=value_range, y=poisson_values, mode='lines', name='Distribución de Poisson ajustada')
+st.plotly_chart(fig)
+
+
 
 
 
