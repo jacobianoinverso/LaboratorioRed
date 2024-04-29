@@ -11,7 +11,6 @@ from scipy.stats import poisson
 
 st.title('Decaimiento radioactivo del Cesio-137')
 st.write("Jacobo Ponce")
-st.write("César García")
 
 st.write("En este experimento, vamos a analizar la cantidad de partículas en el aire y las emitidas por una muestra de cesio-137 en decadencia y vamos a ajustar los resultados utilizando las distribuciones de Gauss y de Poisson. Para saber si estos ajustes son correctos, haremos la prueba de χ² para cada uno de los ajustes. Esto nos va a ayudar a saber si las funciones con las que vamos a ajustar los datos pueden ser usadas para estudiar el decaimiento radioactivo o si vamos a tener que optar por una distribución diferente para poder estudiar estos datos.")
 
@@ -54,6 +53,12 @@ st.title("Fórmulas relevantes")
 
 st.write("Fórmula de distribución de probabilidad de Pearson")
 st.latex(r'''\chi^2=\sum^{k}_{i=1}\frac{(x_i-m_i)^2}{m_i}=\sum^k_{i=1}\frac{x_i^2}{m_i}-n''')
+
+st.title("Planteamiento del problema")
+st.write("Las partículas elementales que se desprenden de diferentes fenómenos como el decaimiento radioactivo, tienen normalmente un comportamiento que a simple vista pareciera ser caótico. Cuando tenemos como muestra un radioisótopo, la fuente de partículas es más constante. Sin embargo, cuando tenemos como muestra un espacio cualquiera, pueden ser partículas emitidas por estrellas lejanas, por radioisótopos en otras partes del mundo, por fenómenos cósmicos de alta energía, etcétera, por lo que la fuente de partículas se podría considerar más aleatoria.")
+st.write("Vamos a estudiar las detecciones de partículas tanto de un espacio cualquiera de aire como de un radioisótopo para vcerificar si estas emisiones son realmente aleatorias o si siguen un patrón que podemos ajustar a alguna de las dos distribuciones descritas con anterioridad.")
+
+st.title("Pre")
 
 
 
