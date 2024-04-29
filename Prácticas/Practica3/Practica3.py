@@ -137,7 +137,8 @@ mequierodormir = str(round(sum(pmf),3))
 st.write("Cuya prueba de χ cuadrado devuelve un valor de " + mequierodormir)
 
 
-
+st.write("Como podemos observar, las gráficas de ajuste se adaptan bastante bien a los datos observados. A simple vista, no se nota la diferencia entre los dos métodos de ajuste utilizados para los datos del aire.")
+st.write("Sin embargo, analizando los resultados de las pruebas de χ cuadrado, podemos ver que arrojan resultados diferentes y que la distribuciónde Poisson se adapta mejor")
 
 
 
@@ -178,7 +179,11 @@ chipuyu = str(chipuyu)
 
 st.write("Cuya prueba de χ cuadrado devuelve un valor de " + chipuyu)
 
+st.write("Como podemos observar, al tener más datos, las curvas se ajustan de mejor manera a los datos observados. Aquí, hay una diferencia más visible entre los diferentes ajustes sin ver las pruebas de χ cuadrado.")
+st.write("Podemos ver también que, aunque no sea tan precisa (en lo que cabe, ya que ninguna curva va a describir a la perfección un fenómeno) como la prueba de χ cuadrado de los datos de aire, sigfue siendo más acertada que la curva gaussiana.")
 
+st.title("Conclusiones")
+st-write("Las pruebas de χ cuadrado hechas para los ajustes gaussiano y de Poisson para los dos grupos de datos estudiados (cantidad de partículas en el aire y cantidad de partículas emitidas por una muestra de cesio-137)")
 
 
 
@@ -226,12 +231,20 @@ ax.legend()
 # Mostrar gráfico
 st.pyplot(fig)
 
-st.write("A simple vista, podemos decir dos cosas; que tanto las emisiones de partículas del cesio y del aire siguen cierto orden, pese a lo predicho y que ambas se adaptan bastante bien a las dos distribuciones usadas en este experimento.")
-st.write("Sin embargo, hace falta la prueba ed χ cuadrado para saber si de verdad son aceptables para describir estos fenómenos")
-
 
 
 aaaaaaaaaaa = str(round(sum(pmf),3))
 
 st.write("Cuya prueba de χ cuadrado devuelve un valor de " + aaaaaaaaaaa)
 
+
+
+
+
+
+st.write("Como podemos observar, al tener más datos, las curvas se ajustan de mejor manera a los datos observados. Aquí, hay una diferencia más visible entre los diferentes ajustes sin ver las pruebas de χ cuadrado.")
+st.write("Podemos ver también que, aunque no sea tan precisa (en lo que cabe, ya que ninguna curva va a describir a la perfección un fenómeno) como la prueba de χ cuadrado de los datos de aire, sigfue siendo más acertada que la curva gaussiana.")
+
+st.title("Conclusiones")
+st-write("Las pruebas de χ cuadrado hechas para los ajustes gaussiano y de Poisson para los dos grupos de datos estudiados (cantidad de partículas en el aire y cantidad de partículas emitidas por una muestra de cesio-137) nos mostraron de que ambas distribuciones describen de una manera aceptable ambos fenómenos.")
+st.write("La prueba también nos mostró que, de entre las dos distribuciones usadas, la que más se asemeja a los datos observados es la distribución de Poisson")
