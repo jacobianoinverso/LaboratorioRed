@@ -67,7 +67,7 @@ ax.set_ylabel("Frecuencia")
 ax.set_title("Gráfico de barras de los datos originales")
 
 # Gráfico de la distribución Poisson estimada
-ax.plot(x, pmf, 'ro-', label='Distribución Poisson estimada')
+ax.plot(x, 100*pmf, 'ro-', label='Distribución Poisson estimada')
 ax.set_xlabel("Valor")
 ax.set_ylabel("Probabilidad")
 
