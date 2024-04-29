@@ -87,6 +87,7 @@ inky = fitaire(value_range, *params)[:11]
 
 ironmaiden = sum(inky
                  ) / 250
+ironmaiden = round(ironmaiden,3)
 st.write(ironmaiden)
 
 
