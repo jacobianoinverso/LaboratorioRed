@@ -80,14 +80,14 @@ fig = px.bar(x=aigre['value'], y=aigre['count'], labels={'x': 'Value', 'y': 'Cou
 fig.add_scatter(x=value_range, y=fitaire(value_range, *params), mode='lines', name='Curva ajustada')
 st.plotly_chart(fig)
 
-inky = fitaire(value_range, *params)[:10]
+inky = fitaire(value_range, *params)[:11]
 
 st.write(inky)
 
-st.write(fitaire(value_range, *params))
+
 st.write(aigre["count"])
 
-
+st.write(inky+aigre["count"])
 
 
 
