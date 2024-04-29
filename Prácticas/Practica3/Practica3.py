@@ -171,6 +171,9 @@ st.plotly_chart(fig)
 
 pinky = fitgaussian(value_range2, *paramsa)
 
+st.write(pinky)
+
+
 chipuyu = sum(pinky)
 chipuyu = str(chipuyu)
 
