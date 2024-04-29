@@ -62,7 +62,7 @@ st.plotly_chart(fig)
 
 # Ajuste Poisson
 def fit_poisson(x, lmbda):
-    return (lmbda**x) * np.exp(-lmbda) / np.math.factorial(x)
+    return (lmbda**x) * np.exp(-lmbda) / math.factorial(x)  # Corregir esta línea
 
 # Estimación inicial para el parámetro lambda
 lambda_guess = np.mean(aigre['value'])
@@ -71,39 +71,16 @@ lambda_guess = np.mean(aigre['value'])
 value_range2 = np.arange(aigre['value'].min(), aigre['value'].max() + 1)
 
 # Ajuste de la curva de Poisson
-params22, _ = sco.curve_fit(fit_poisson, aigre['value'], aigre['count'], p0=[lambda_guess])
+params2, _ = sco.curve_fit(fit_poisson, aigre['value'], aigre['count'], p0=[lambda_guess])
 
 # Crear el grafico
 fig = px.bar(x=aigre['value'], y=aigre['count'], labels={'x': 'Value', 'y': 'Count'}, title='Histograma de Valores')
 
-# Ajuste de valores de la distribución de Poisson para el rango de valores
+# Calculo de los valores ajustados de la distribución de Poisson para el rango de valores
 poisson_values = fit_poisson(value_range2, *params2)
 
 # Curva ajustada de Poisson al gráfico
-fig.add_scatter(x=value_range2, y=poisson_values, mode='lines', name='Distribución de Poisson ajustada')
+fig.add_scatter(x=value_range, y=poisson_values, mode='lines', name='Distribución de Poisson ajustada')
 
 # Mostrar el gráfico
 st.plotly_chart(fig)
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
