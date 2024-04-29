@@ -59,6 +59,20 @@ st.plotly_chart(fig)
 
 
 
+pinulito2 = pd.read_csv('chuchitosdecesio.csv')
+pinulito = pinulito2.value_counts().sort_index().reset_index()
+pinulito.columns = ['value', 'count']
+def fitaire(x, A, u, r):
+    return A * np.exp(-((x - u) / r)**2 / 2)
+guess2 = (445.463, -522.646,  4815.97)
+params2, _ = sco.curve_fit(fitaire, pinulito['value'], pinulito['count'], p0=guess2)
+value_range2 = np.arange(pinulito['value'].min(), pinulito['value'].max() + 1)
+fig2 = px.bar(x=pinulito['value'], y=pinulito['count'], labels={'x': 'Value', 'y': 'Count'}, title='Histograma de Valores')
+fig2.add_scatter(x=value_range2, y=fitaire(value_range2, *params2), mode='lines', name='Curva ajustada')
+st.plotly_chart(fig2)
+
+
+
 
 def fit_poisson(x, lam):
     return (np.exp(-lam) * np.power(lam, x)) / np.math.factorial(x)
