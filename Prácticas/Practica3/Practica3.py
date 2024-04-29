@@ -49,6 +49,8 @@ aigre2 = pd.read_csv('chuchitosdeaire.csv')
 aigre = aigre2.value_counts()
 aigre = aigre.sort_index()
 aigre = pd.DataFrame(aigre)
+for row, value in aigre.items():
+    aigre.loc[row,0] = value
 
 st.write(aigre)
 
