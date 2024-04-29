@@ -133,8 +133,9 @@ ax.legend()
 st.pyplot(fig)
 
 
+mequierodormir = str(sum(pmf))
+st.write("Cuya prueba de χ cuadrado devuelve un valor de " + mequierodormir)
 
-st.write(pmf)
 
 
 
