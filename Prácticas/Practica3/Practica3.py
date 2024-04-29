@@ -94,8 +94,9 @@ st.write(pollo)
 mequierodormir = [((i+j)**2)/j for i, j in zip(pollo, inky)]
 st.write(mequierodormir)
 
-ironmaiden = sum(mequierodormir)
-st.write(ironmaiden)
+ironmaiden = sum(inky
+                 )
+st.write(ironmaiden / 250)
 
 
 
