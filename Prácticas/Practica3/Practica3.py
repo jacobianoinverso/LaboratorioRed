@@ -48,7 +48,12 @@ st.write("Donde Γ(x,y) es la función gamma incompleta")
 
 st.header("Prueba de χ²")
 
+st.write("Esta prueba se refiere a tres tipos diferentes de pruebas estadísticas. En este caso, vamos a estar tratando la prueba de Pearson para saber si los ajustes son los correctos según los datos para los que se vayan a usar.")
+st.write("La prueba de Pearson consiste en hacer dos hipótesis y si el valor de χ cuadrado es mayor o menor parámetro, se considera verdadera cualquiera de las dos hipótesis. Tanto las hipótesis como el parámetro van a variar edpendiendo del experimento.")
+st.title("Fórmulas relevantes")
 
+st.write("Fórmula de distribución de probabilidad de Pearson")
+st.latex(r'''\chi^2?\sum^{k}_{i=1}\frac{(x_i-m_i)^2}{m_i}=\sum^k_{i=1}\frac{x_i^2}{m_i}-n''')
 
 
 
