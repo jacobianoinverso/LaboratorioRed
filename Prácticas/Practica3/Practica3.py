@@ -112,3 +112,27 @@ ax.legend()
 
 # Mostrar gráfico
 st.pyplot(fig)
+
+
+st.write("A continuación, los datos de las partículas emitidas por el cesio-137 ajustadas con la distribución gaussiana")
+
+
+
+guate = pd.read_csv('chuchitosdecesio.csv')
+
+morfosis = guate.value_counts().sort_index().reset_index()
+morfosis.columns = ['value', 'count']
+
+def fitgaussian(x, A, mu, sigma):
+    return A * np.exp(-0.5 * ((x - mu) / sigma)**2)
+
+carnitas = (2000, 450, 50)
+
+paramsa, _ = sco.curve_fit(fitgaussian, morfosis['value'], morfosis['count'], p0=carnitas)
+
+value_range2 = np.linspace(morfosis['value'].min(), morfosis['value'].max(), 1000)
+
+fig = px.bar(x=morfosis['value'], y=morfosis['count'], labels={'x': 'Value', 'y': 'Count'}, title='Histograma de Valores')
+fig.add_scatter(x=value_range2, y=fitgaussian(value_range2, *paramsa), mode='lines', name='Curva ajustada')
+
+st.plotly_chart(fig)
