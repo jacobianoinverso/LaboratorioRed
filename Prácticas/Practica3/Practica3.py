@@ -57,7 +57,7 @@ fitaire = np.vectorize(fitaire)
 value_range = np.arange(15
                         )
 fitairelucescampero= px.line(x=value_range, y=fitaire(value_range))
-st.plotly_chart(fitaire)
+st.plotly_chart(fitairelucescampero)
 
 
 
