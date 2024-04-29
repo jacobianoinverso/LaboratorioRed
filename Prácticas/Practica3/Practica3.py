@@ -80,10 +80,12 @@ fig = px.bar(x=aigre['value'], y=aigre['count'], labels={'x': 'Value', 'y': 'Cou
 fig.add_scatter(x=value_range, y=fitaire(value_range, *params), mode='lines', name='Curva ajustada')
 st.plotly_chart(fig)
 
+st.write("Estos son los mismos datos, pero ajustados a la distribución de Poisson")
+
 
 def load_data(file_path):
     return pd.read_csv(file_path, header=None, names=['data'])
-data = load_data("chuchitosdecesio.csv")
+data = load_data("chuchitosdeaire.csv")
 
 # Estimar la distribución Poisson
 mu = data['data'].mean()
