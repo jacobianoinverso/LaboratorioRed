@@ -81,7 +81,7 @@ fig.add_scatter(x=value_range, y=fitaire(value_range, *params), mode='lines', na
 st.plotly_chart(fig)
 
 inky = fitaire(value_range, *params)[:10]
-pinky = 
+
 st.write(inky)
 
 st.write(fitaire(value_range, *params))
