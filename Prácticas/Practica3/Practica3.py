@@ -66,6 +66,8 @@ st.write("Una vez graficados los datos junto a los ajustes, haremos la prueba de
 
 
 st.title("Resultados")
+
+st.write("A continuación, vemos la tabla de resultados de la cantidad de partículas medidas en un espacio cualquiera de aire ajustados con una distribución gaussiana")
 aigre2 = pd.read_csv('chuchitosdeaire.csv')
 aigre = aigre2.value_counts().sort_index().reset_index()
 aigre.columns = ['value', 'count']
