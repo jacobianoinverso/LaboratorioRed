@@ -45,23 +45,12 @@ st.write("Función de distribución")
 st.latex(r'''cdf = \frac{\Gamma(\lfloor k+1\rfloor,\lambda)}{\lfloor k\rfloor!}''')
 st.write("Donde Γ(x,y) es la función gamma incompleta")
 
-aigre2 = pd.read_csv('chuchitosdeaire.csv')
-aigre = aigre2.value_counts().sort_index().reset_index()
-aigre.columns = ['value', 'count']
-def fitaire(x, A, u, r):
-    return A * np.exp(-((x - u) / r)**2 / 2)
-guess = (1025.07, -305.742, 91.8277)
-params, _ = sco.curve_fit(fitaire, aigre['value'], aigre['count'], p0=guess)
-value_range = np.arange(aigre['value'].min(), aigre['value'].max() + 1)
-fig = px.bar(x=aigre['value'], y=aigre['count'], labels={'x': 'Value', 'y': 'Count'}, title='Histograma de Valores')
-fig.add_scatter(x=value_range, y=fitaire(value_range, *params), mode='lines', name='Curva ajustada')
-st.plotly_chart(fig)
 
 
 
-aigre3 = pd.read_csv('chuchitosdeaire.csv', header=None, names=['value'], delimiter=',')
+aaigre = pd.read_csv('chuchitosdeaire.csv', header=None, names=['value'], delimiter=',')
 
-aigre_counts = aigre3['value'].value_counts().sort_index().reset_index()
+aigre_counts = aigre['value'].value_counts().sort_index().reset_index()
 aigre_counts.columns = ['value', 'count']
 
 def fit_poisson(x, lam):
@@ -69,15 +58,12 @@ def fit_poisson(x, lam):
 
 lam_guess = 100
 
-params2, _ = sco.curve_fit(fit_poisson, aigre_counts['value'], aigre_counts['count'], p0=[lam_guess])
+params, _ = sco.curve_fit(fit_poisson, aigre_counts['value'], aigre_counts['count'], p0=[lam_guess])
 
-value_range2 = np.arange(aigre_counts['value'].min(), aigre_counts['value'].max() + 1)
+value_range = np.arange(aigre_counts['value'].min(), aigre_counts['value'].max() + 1)
 
 fig = px.bar(x=aigre_counts['value'], y=aigre_counts['count'], labels={'x': 'Value', 'y': 'Count'}, title='Histograma de Valores')
 
-fig.add_scatter(x=value_range2, y=fit_poisson(value_range2, *params2), mode='lines', name='Curva ajustada (Poisson)')
+fig.add_scatter(x=value_range, y=fit_poisson(value_range, *params), mode='lines', name='Curva ajustada (Poisson)')
 
 st.plotly_chart(fig)
-
-
-
