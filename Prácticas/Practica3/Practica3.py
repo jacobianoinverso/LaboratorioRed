@@ -182,8 +182,7 @@ st.write("Cuya prueba de χ cuadrado devuelve un valor de " + chipuyu)
 st.write("Como podemos observar, al tener más datos, las curvas se ajustan de mejor manera a los datos observados. Aquí, hay una diferencia más visible entre los diferentes ajustes sin ver las pruebas de χ cuadrado.")
 
 
-st.title("Conclusiones")
-st.write("Las pruebas de χ cuadrado hechas para los ajustes gaussiano y de Poisson para los dos grupos de datos estudiados (cantidad de partículas en el aire y cantidad de partículas emitidas por una muestra de cesio-137)")
+
 
 
 
