@@ -90,9 +90,8 @@ st.write(inky)
 
 pollo = aigre["count"]
 st.write(pollo)
-st.write(square(inky+aigre["count"]))
 
-mequierodormir = [(i+j)**2/j for i, j in zip(pollo, inky)]
+mequierodormir = [((i+j)**2)/j for i, j in zip(pollo, inky)]
 st.write(mequierodormir)
 
 
