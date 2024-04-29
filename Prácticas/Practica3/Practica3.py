@@ -49,6 +49,8 @@ aigre2 = pd.read_csv('chuchitosdeaire.csv')
 aigre = aigre2.value_counts()
 aigre = pd.DataFrame(aigre)
 
+st.write(aigre)
+
 def fitaire(x):
     A=   30.1351
     u= -120.251
