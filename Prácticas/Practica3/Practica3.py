@@ -173,7 +173,7 @@ pinky = fitgaussian(value_range2, *paramsa)
 
 
 
-chipuyu = sum(pinky) / 2001
+chipuyu = round(sum(pinky) / 2001, 3)
 chipuyu = str(chipuyu)
 
 st.write("Cuya prueba de χ cuadrado devuelve un valor de " + chipuyu)
