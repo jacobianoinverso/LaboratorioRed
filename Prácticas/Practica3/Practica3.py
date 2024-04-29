@@ -56,7 +56,7 @@ aigre.columns = ['value', 'count']
 def fitgaussian(x, A, mu, sigma):
     return A * np.exp(-0.5 * ((x - mu) / sigma)**2)
 
-guess = (200, 450, 50)
+guess = (2000, 450, 50)
 
 params, _ = sco.curve_fit(fitgaussian, aigre['value'], aigre['count'], p0=guess)
 
