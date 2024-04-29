@@ -62,7 +62,7 @@ st.title("Medición de los datos")
 st.write("Usando un detector de partículas de diversos niveles de energía, haremos 250 mediciones en un espacio de aire, donde pensamos que la cantidad de partículas va a ser más aleatoria. Luego, haremos 250 mediciones sobre una muestra de cesio-137, donde pensamos que las emisiones van a tener un orden más visible.")
 st.write("Una vez obtenidos estos datos, los ordenaremos en gráficas separadas para ver si hay cierta relación entre los datos y una curva conocida.")
 st.write("Ajustaremos las gráficas a dos funciones de análisis probabilístico; la distribución normal o Gaussiana y la distribución de Poisson.")
-st.write("Una vez graficados los datos junto a los ajustes, haremos la prueba de χ cuadrado, donde nuestro parámetro va a ser el número máximo              . Si el resultado de la prueba es menor a este parámetro, vamos a considerar que la distribución ajustada describe de forma acertada la probabilidad de la cantidad de partículas emitidas. De ser mayor, vamos a considerar de que no la describe de forma completa.")
+st.write("Una vez graficados los datos junto a los ajustes, haremos la prueba de χ cuadrado, donde nuestro parámetro va a ser 0.5, ya que la suma de todos los valores de p cuando hacemos esta prueba es 1, vamos a tomar 0.5 como parámetro porque es el menor número que redondea a 1. Si el resultado de la prueba es menor a este parámetro, vamos a considerar que la distribución ajustada no describe de forma acertada la probabilidad de la cantidad de partículas emitidas. De ser mayor, vamos a considerar de que la describe de forma correcta.")
 
 
 st.title("Resultados")
@@ -85,18 +85,10 @@ def square(list):
 
 inky = fitaire(value_range, *params)[:11]
 
-st.write(inky)
-
-
-pollo = aigre["count"]
-st.write(pollo)
-
-mequierodormir = [((i+j)**2)/j for i, j in zip(pollo, inky)]
-st.write(mequierodormir)
-
 ironmaiden = sum(inky
-                 )
-st.write(ironmaiden / 250)
+                 ) / 250
+st.write(ironmaiden)
+
 
 
 
