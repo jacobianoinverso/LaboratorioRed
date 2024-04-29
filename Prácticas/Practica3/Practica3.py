@@ -133,6 +133,17 @@ ax.legend()
 st.pyplot(fig)
 
 
+
+st.write(pmf)
+
+
+
+
+
+
+
+
+
 st.write("A continuación, los datos de las partículas emitidas por el cesio-137 ajustadas con la distribución gaussiana")
 
 
