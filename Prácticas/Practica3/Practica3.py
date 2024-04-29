@@ -65,7 +65,18 @@ st.write("Ajustaremos las gráficas a dos funciones de análisis probabilístico
 st.write("Una vez graficados los datos junto a los ajustes, haremos la prueba de χ cuadrado, donde nuestro parámetro va a ser el número máximo              . Si el resultado de la prueba es menor a este parámetro, vamos a considerar que la distribución ajustada describe de forma acertada la probabilidad de la cantidad de partículas emitidas. De ser mayor, vamos a considerar de que no la describe de forma completa.")
 
 
-
+st.title("Resultados")
+aigre2 = pd.read_csv('chuchitosdeaire.csv')
+aigre = aigre2.value_counts().sort_index().reset_index()
+aigre.columns = ['value', 'count']
+def fitaire(x, A, u, r):
+    return A * np.exp(-((x - u) / r)**2 / 2)
+guess = (1025.07, -305.742, 91.8277)
+params, _ = sco.curve_fit(fitaire, aigre['value'], aigre['count'], p0=guess)
+value_range = np.arange(aigre['value'].min(), aigre['value'].max() + 1)
+fig = px.bar(x=aigre['value'], y=aigre['count'], labels={'x': 'Value', 'y': 'Count'}, title='Histograma de Valores')
+fig.add_scatter(x=value_range, y=fitaire(value_range, *params), mode='lines', name='Curva ajustada')
+st.plotly_chart(fig)
 
 
 def load_data(file_path):
