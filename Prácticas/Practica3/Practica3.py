@@ -126,7 +126,7 @@ morfosis.columns = ['value', 'count']
 def fitgaussian(x, A, mu, sigma):
     return A * np.exp(-0.5 * ((x - mu) / sigma)**2)
 
-carnitas = (2000, 450, 50)
+carnitas = (3000, 450, 50)
 
 paramsa, _ = sco.curve_fit(fitgaussian, morfosis['value'], morfosis['count'], p0=carnitas)
 
