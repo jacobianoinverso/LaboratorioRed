@@ -83,7 +83,7 @@ st.plotly_chart(fig)
 def square(list):
     return [i ** 2 for i in list]
 
-inky = fitaire(value_range, *params)[:11]
+inky = fitaire(value_range, *params)
 
 ironmaiden = sum(inky
                  ) / 250
