@@ -46,6 +46,14 @@ st.write("Función de distribución")
 st.latex(r'''cdf = \frac{\Gamma(\lfloor k+1\rfloor,\lambda)}{\lfloor k\rfloor!}''')
 st.write("Donde Γ(x,y) es la función gamma incompleta")
 
+st.header("Prueba de χ²")
+
+
+
+
+
+
+
 
 def load_data(file_path):
     return pd.read_csv(file_path, header=None, names=['data'])
