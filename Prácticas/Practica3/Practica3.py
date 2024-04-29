@@ -48,21 +48,42 @@ st.write("Donde Γ(x,y) es la función gamma incompleta")
 
 
 
-aigre2 = pd.read_csv('chuchitosdecesio.csv')
+import streamlit as st
+import pandas as pd
+import numpy as np
+import matplotlib.pyplot as plt
+from scipy.stats import poisson
 
-aigre = aigre2.value_counts().sort_index().reset_index()
-aigre.columns = ['value', 'count']
+# Leer los datos del archivo CSV
+@st.cache
+def load_data(file_path):
+    return pd.read_csv(file_path, header=None, names=['data'])
 
-def fitgaussian(x, A, mu, sigma):
-    return A * np.exp(-0.5 * ((x - mu) / sigma)**2)
+data = load_data("chuchitosdeaire.csv")
 
-guess = (2000, 450, 50)
+# Estimar la distribución Poisson
+mu = data['data'].mean()
+poisson_dist = poisson(mu)
+x = np.arange(0, data['data'].max() + 1)
+pmf = poisson_dist.pmf(x)
 
-params, _ = sco.curve_fit(fitgaussian, aigre['value'], aigre['count'], p0=guess)
+# Crear un gráfico combinado
+fig, (ax1, ax2) = plt.subplots(2, 1, figsize=(8, 8))
 
-value_range = np.linspace(aigre['value'].min(), aigre['value'].max(), 1000)
+# Gráfico de barras de los datos originales
+ax1.bar(data['data'].value_counts().sort_index().index, data['data'].value_counts().sort_index().values)
+ax1.set_xlabel("Valor")
+ax1.set_ylabel("Frecuencia")
+ax1.set_title("Gráfico de barras de los datos originales")
 
-fig = px.bar(x=aigre['value'], y=aigre['count'], labels={'x': 'Value', 'y': 'Count'}, title='Histograma de Valores')
-fig.add_scatter(x=value_range, y=fitgaussian(value_range, *params), mode='lines', name='Curva ajustada')
+# Gráfico de la distribución Poisson estimada
+ax2.bar(x, pmf)
+ax2.set_xlabel("Valor")
+ax2.set_ylabel("Probabilidad")
+ax2.set_title("Distribución Poisson estimada")
 
-st.plotly_chart(fig)
+# Ajustar diseño
+plt.tight_layout()
+
+# Mostrar gráfico
+st.pyplot(fig)
