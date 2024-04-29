@@ -88,10 +88,12 @@ inky = fitaire(value_range, *params)[:11]
 st.write(inky)
 
 
-st.write(aigre["count"])
+pollo = aigre["count"]
 
 st.write(square(inky+aigre["count"]))
 
+mequierodormir = [(i+j)**2/j for i, j in zip(pollo, inky)]
+st.write(mequierodormir)
 
 
 
