@@ -52,9 +52,9 @@ aigre = pd.DataFrame(aigre)
 st.write(aigre)
 
 def fitaire(x):
-    A=   433.372
-    u=  -262.305 
-    r =   85.697
+    A=   1025.07
+    u=  -305.742 
+    r =   91.8277 
     x=x
     return A*math.exp(-((x-u)/r)**2/2)
 
