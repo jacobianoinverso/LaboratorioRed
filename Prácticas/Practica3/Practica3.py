@@ -47,7 +47,7 @@ st.write("Donde Γ(x,y) es la función gamma incompleta")
 
 aigre2 = pd.read_csv('chuchitosdeaire.csv')
 aigre = aigre2.value_counts()
-aigre = aigre2.sort_values()
+aigre = aigre2.sort_index
 aigre = pd.DataFrame(aigre)
 
 st.write(aigre)
