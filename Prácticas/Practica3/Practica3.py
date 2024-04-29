@@ -257,10 +257,9 @@ st.write("Ahrens, Joachim H.; Dieter, Ulrich (1974). «Computer Methods for Samp
 st.write("Fuente de radionucleidos del gobierno de los Estados Unidos – producción, investigación, desarrollo, distribución e información.")
 
 
-pinulito = "http://www.mescours.info/physique-Decroissance_radioactive-32.xhtml"
-st.write("www.mescours.info . [Cours niveau Terminale S sur la décroissance radioactive](%s)") %pinulito
-pollito = "https://books.google.es/books?id=ZM-qMxtLABUC&pg=PA96&dq=Cesio-137++isótopo++cesio&hl=es&sa=X&ved=0ahUKEwik3qOGnoXZAhVTsBQKHT5bDosQ6AEIMTAC#v=onepage&q=Cesio-137%20%20isótopo%20%20cesio&f=false"
-st.write("Hill, John W. (1999). [Química para el nuevo milenio](%s)") %pollito
+
+st.write("www.mescours.info . Cours niveau Terminale S sur la décroissance radioactive") 
+st.write("Hill, John W. (1999). Química para el nuevo milenio") 
 
 
 
