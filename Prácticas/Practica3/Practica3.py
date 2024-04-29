@@ -45,7 +45,8 @@ st.write("Función de distribución")
 st.latex(r'''cdf = \frac{\Gamma(\lfloor k+1\rfloor,\lambda)}{\lfloor k\rfloor!}''')
 st.write("Donde Γ(x,y) es la función gamma incompleta")
 
-aigre = pd.read_csv('chuchitosdeaire.csv')
+aigre2 = pd.read_csv('chuchitosdeaire.csv')
+aigre = aigre2.value_counts()
 aigre = pd.DataFrame(aigre)
 
 def fitaire(x):
@@ -59,7 +60,7 @@ fitaire = np.vectorize(fitaire)
 value_range = np.arange(27
                         )
 fitairelucescampero= px.line(x=value_range, y=fitaire(value_range))
-fitairelucescampero.add_bar(x=value_range, y=aigre["10"])
+fitairelucescampero.add_bar(x=value_range, y=aigre)
 st.plotly_chart(fitairelucescampero)
 
 
