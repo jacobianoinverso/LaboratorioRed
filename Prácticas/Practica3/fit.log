@@ -1,0 +1,39 @@
+
+
+*******************************************************************************
+Sun Apr 28 18:02:32 2024
+
+
+FIT:    data read from 'chuchito.csv' using 0:1 every :::0::d
+        format = x:z
+        x range restricted to [0.00000 : 400.000]
+        #datapoints = 250
+        residuals are weighted equally (unit weight)
+
+function used for fitting: f(x)
+	f(x) = A*exp(-((x-u)/r)**2/2)
+fitted parameters initialized with current variable values
+
+iter      chisq       delta/lim  lambda   A             u             r            
+   0 2.1081160210e+07   0.00e+00  2.82e+02    4.000000e+02   2.000000e+02   1.000000e+02
+   8 1.2385899738e+03  -2.03e-01  2.82e-02    2.762149e+00   4.342923e+02   9.357070e+02
+
+After 8 iterations the fit converged.
+final sum of squares of residuals : 1238.59
+rel. change during last iteration : -2.03313e-06
+
+degrees of freedom    (FIT_NDF)                        : 247
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 2.23932
+variance of residuals (reduced chisquare) = WSSR/ndf   : 5.01453
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+A               = 2.76215          +/- 2.977        (107.8%)
+u               = 434.292          +/- 6340         (1460%)
+r               = 935.707          +/- 9580         (1024%)
+
+correlation matrix of the fit parameters:
+                A      u      r      
+A               1.000 
+u               0.992  1.000 
+r               0.975  0.995  1.000 

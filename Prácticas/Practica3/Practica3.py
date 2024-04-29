@@ -43,7 +43,20 @@ st.latex(r'''fp=\frac{e^{-\lambda}\lambda^k}{k!}''')
 
 st.write("Función de distribución")
 st.latex(r'''cdf = \frac{\Gamma(\lfloor k+1\rfloor,\lambda)}{\lfloor k\rfloor!}''')
+st.write("Donde Γ(x,y) es la función gamma incompleta")
 
+
+def fit(x):
+    A=  475.56
+    u= 88.751 
+    r =  6.43244
+    x=x
+    return A*math.exp(-((x-u)/r)**2/2)
+
+fit = np.vectorize(fit)
+value_range = np.arange(150
+                        )
+fitfit= px.line(x=value_range, y=fit(value_range))
 
 
 
