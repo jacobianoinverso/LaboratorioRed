@@ -56,7 +56,7 @@ aigre.columns = ['value', 'count']
 def fitaire(x, A, u, r):
     return A * np.exp(-((x - u) / r)**2 / 2)
 
-guess = (1025.07, -305.742, 91.8277)
+guess = (445.463, -522.646,  4815.97)
 
 params, _ = sco.curve_fit(fitaire, aigre['value'], aigre['count'], p0=guess)
 
