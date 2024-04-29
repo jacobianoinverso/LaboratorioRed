@@ -49,9 +49,9 @@ aigre = pd.read_csv('chuchitosdeaire.csv')
 aigre = pd.DataFrame(aigre)
 
 def fitaire(x):
-    A=   1025.07
-    u= -305.742
-    r =  91.8277 
+    A=   30.1351
+    u= -120.251
+    r =  59.7129 
     x=x
     return A*math.exp(-((x-u)/r)**2/2)
 
