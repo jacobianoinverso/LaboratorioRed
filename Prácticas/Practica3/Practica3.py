@@ -175,4 +175,4 @@ def square(list):
 
 st.write(aigre)
 
-st.write(square(aigre))
+st.write(square(aigre["count"]))
