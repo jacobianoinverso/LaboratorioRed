@@ -53,16 +53,16 @@ aigre2 = pd.read_csv('chuchitosdecesio.csv')
 aigre = aigre2.value_counts().sort_index().reset_index()
 aigre.columns = ['value', 'count']
 
-def fitaire(x, A, u, r):
-    return A * np.exp(-((x - u) / r)**2 / 2)
+def fitgaussian(x, A, mu, sigma):
+    return A * np.exp(-0.5 * ((x - mu) / sigma)**2)
 
-guess = (445.463, -522.646,  4815.97)
+guess = (200, 450, 50)
 
-params, _ = sco.curve_fit(fitaire, aigre['value'], aigre['count'], p0=guess)
+params, _ = sco.curve_fit(fitgaussian, aigre['value'], aigre['count'], p0=guess)
 
-value_range = np.arange(aigre['value'].min(), aigre['value'].max() + 1)
+value_range = np.linspace(aigre['value'].min(), aigre['value'].max(), 1000)
 
 fig = px.bar(x=aigre['value'], y=aigre['count'], labels={'x': 'Value', 'y': 'Count'}, title='Histograma de Valores')
-fig.add_scatter(x=value_range, y=fitaire(value_range, *params), mode='lines', name='Curva ajustada')
+fig.add_scatter(x=value_range, y=fitgaussian(value_range, *params), mode='lines', name='Curva ajustada')
 
 st.plotly_chart(fig)
