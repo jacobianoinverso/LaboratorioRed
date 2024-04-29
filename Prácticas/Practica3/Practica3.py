@@ -47,7 +47,8 @@ st.latex(r'''cdf = \frac{\Gamma(\lfloor k+1\rfloor,\lambda)}{\lfloor k\rfloor!}'
 st.write("Donde Γ(x,y) es la función gamma incompleta")
 
 
-
+def load_data(file_path):
+    return pd.read_csv(file_path, header=None, names=['data'])
 data = load_data("chuchitosdeaire.csv")
 
 # Estimar la distribución Poisson
