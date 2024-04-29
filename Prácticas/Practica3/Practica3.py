@@ -7,6 +7,7 @@ import math
 import plotly.express as px
 from scipy import stats as ssτ
 from scipy import special as ssp
+from scipy.stats import poisson
 
 st.title('Decaimiento radioactivo del Cesio-137')
 st.write("Jacobo Ponce")
@@ -47,18 +48,6 @@ st.write("Donde Γ(x,y) es la función gamma incompleta")
 
 
 
-
-import streamlit as st
-import pandas as pd
-import numpy as np
-import matplotlib.pyplot as plt
-from scipy.stats import poisson
-
-# Leer los datos del archivo CSV
-@st.cache
-def load_data(file_path):
-    return pd.read_csv(file_path, header=None, names=['data'])
-
 data = load_data("chuchitosdeaire.csv")
 
 # Estimar la distribución Poisson
@@ -68,22 +57,21 @@ x = np.arange(0, data['data'].max() + 1)
 pmf = poisson_dist.pmf(x)
 
 # Crear un gráfico combinado
-fig, (ax1, ax2) = plt.subplots(2, 1, figsize=(8, 8))
+fig, ax = plt.subplots(figsize=(8, 6))
 
 # Gráfico de barras de los datos originales
-ax1.bar(data['data'].value_counts().sort_index().index, data['data'].value_counts().sort_index().values)
-ax1.set_xlabel("Valor")
-ax1.set_ylabel("Frecuencia")
-ax1.set_title("Gráfico de barras de los datos originales")
+ax.bar(data['data'].value_counts().sort_index().index, data['data'].value_counts().sort_index().values, label='Datos originales')
+ax.set_xlabel("Valor")
+ax.set_ylabel("Frecuencia")
+ax.set_title("Gráfico de barras de los datos originales")
 
 # Gráfico de la distribución Poisson estimada
-ax2.bar(x, pmf)
-ax2.set_xlabel("Valor")
-ax2.set_ylabel("Probabilidad")
-ax2.set_title("Distribución Poisson estimada")
+ax.plot(x, pmf, 'ro-', label='Distribución Poisson estimada')
+ax.set_xlabel("Valor")
+ax.set_ylabel("Probabilidad")
 
-# Ajustar diseño
-plt.tight_layout()
+# Agregar leyenda
+ax.legend()
 
 # Mostrar gráfico
 st.pyplot(fig)
