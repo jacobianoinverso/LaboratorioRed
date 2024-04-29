@@ -58,8 +58,11 @@ st.title("Planteamiento del problema")
 st.write("Las partículas elementales que se desprenden de diferentes fenómenos como el decaimiento radioactivo, tienen normalmente un comportamiento que a simple vista pareciera ser caótico. Cuando tenemos como muestra un radioisótopo, la fuente de partículas es más constante. Sin embargo, cuando tenemos como muestra un espacio cualquiera, pueden ser partículas emitidas por estrellas lejanas, por radioisótopos en otras partes del mundo, por fenómenos cósmicos de alta energía, etcétera, por lo que la fuente de partículas se podría considerar más aleatoria.")
 st.write("Vamos a estudiar las detecciones de partículas tanto de un espacio cualquiera de aire como de un radioisótopo para vcerificar si estas emisiones son realmente aleatorias o si siguen un patrón que podemos ajustar a alguna de las dos distribuciones descritas con anterioridad.")
 
-st.title("Pre")
-
+st.title("Medición de los datos")
+st.write("Usando un detector de partículas de diversos niveles de energía, haremos 250 mediciones en un espacio de aire, donde pensamos que la cantidad de partículas va a ser más aleatoria. Luego, haremos 250 mediciones sobre una muestra de cesio-137, donde pensamos que las emisiones van a tener un orden más visible.")
+st.write("Una vez obtenidos estos datos, los ordenaremos en gráficas separadas para ver si hay cierta relación entre los datos y una curva conocida.")
+st.write("Ajustaremos las gráficas a dos funciones de análisis probabilístico; la distribución normal o Gaussiana y la distribución de Poisson.")
+st.write("Una vez graficados los datos junto a los ajustes, haremos la prueba de χ cuadrado, donde nuestro parámetro va a ser el número máximo              . Si el resultado de la prueba es menor a este parámetro, vamos a considerar que la distribución ajustada describe de forma acertada la probabilidad de la cantidad de partículas emitidas. De ser mayor, vamos a considerar de que no la describe de forma completa.")
 
 
 
