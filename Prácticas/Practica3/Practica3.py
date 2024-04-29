@@ -166,3 +166,13 @@ ax.legend()
 
 # Mostrar gráfico
 st.pyplot(fig)
+
+st.write("A simple vista, podemos decir dos cosas; que tanto las emisiones de partículas del cesio y del aire siguen cierto orden, pese a lo predicho y que ambas se adaptan bastante bien a las dos distribuciones usadas en este experimento.")
+st.write("Sin embargo, hace falta la prueba ed χ cuadrado para saber si de verdad son aceptables para describir estos fenómenos")
+
+def square(list):
+    return [i ** 2 for i in list]
+
+st.write(aigre)
+
+st.write(square(aigre))

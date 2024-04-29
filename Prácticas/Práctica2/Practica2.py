@@ -108,3 +108,8 @@ pollocampero = "https://www.who.int/es/emergencies/diseases/novel-coronavirus-20
 st.write("[Brote de enfermedad por coronavirus](%s) - Organización Mundial de la Salud" %pollocampero)
 pollopinulito = "https://www.fxsolver.com/browse/formulas/Binomial+distribution"
 st.write("[Binomial distribution formula calculator](%s) - fxsolver.com" %pollopinulito)
+
+
+
+def square(list):
+    return [i ** 2 for i in list]
