@@ -73,6 +73,8 @@ value_range2 = np.arange(aigre['value'].min(), aigre['value'].max() + 1)
 # Ajuste de la curva de Poisson
 params2, _ = sco.curve_fit(fit_poisson, aigre['value'], aigre['count'], p0=[lambda_guess])
 
+st.write(params2)
+
 # Crear el grafico
 fig = px.bar(x=aigre['value'], y=aigre['count'], labels={'x': 'Value', 'y': 'Count'}, title='Histograma de Valores')
 
