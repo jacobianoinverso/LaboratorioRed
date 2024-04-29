@@ -46,26 +46,16 @@ st.latex(r'''cdf = \frac{\Gamma(\lfloor k+1\rfloor,\lambda)}{\lfloor k\rfloor!}'
 st.write("Donde Γ(x,y) es la función gamma incompleta")
 
 aigre2 = pd.read_csv('chuchitosdeaire.csv')
-aigre = aigre2.value_counts()
-aigre = aigre.sort_index()
-aigre = pd.DataFrame(aigre)
-
-st.write(aigre)
-
-def fitaire(x):
-    A=   1025.07
-    u=  -305.742 
-    r =   91.8277 
-    x=x
-    return A*math.exp(-((x-u)/r)**2/2)
-
-fitaire = np.vectorize(fitaire)
-value_range = np.arange(27
-                        )
-fitairelucescampero= px.line(x=value_range, y=fitaire(value_range))
-fitairelucescampero.add_bar(x=value_range, y=aigre["count"])
-st.plotly_chart(fitairelucescampero)
-
+aigre = aigre2.value_counts().sort_index().reset_index()
+aigre.columns = ['value', 'count']
+def fitaire(x, A, u, r):
+    return A * np.exp(-((x - u) / r)**2 / 2)
+guess = (1025.07, -305.742, 91.8277)
+params, _ = sco.curve_fit(fitaire, aigre['value'], aigre['count'], p0=guess)
+value_range = np.arange(aigre['value'].min(), aigre['value'].max() + 1)
+fig = px.bar(x=aigre['value'], y=aigre['count'], labels={'x': 'Value', 'y': 'Count'}, title='Histograma de Valores')
+fig.add_scatter(x=value_range, y=fitaire(value_range, *params), mode='lines', name='Curva ajustada')
+st.plotly_chart(fig)
 
 
 

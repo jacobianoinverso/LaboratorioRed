@@ -13,6 +13,6 @@ r=10
 
 fit f(x) 'chuchitosdeaire.csv' using 0:1 every :::0::d via A,u,r
 
-set xrange [0:20]
+set xrange [0:200]
 # plot 'chuchitosdeaire.csv' using 0:1, f(x)
 plot 'chuchitosdeaire.csv' using 0:1, 'chuchitosdeaire.csv' every :::0::d using 0:1, f(x)
