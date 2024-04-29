@@ -47,6 +47,7 @@ st.write("Donde Γ(x,y) es la función gamma incompleta")
 
 aigre2 = pd.read_csv('chuchitosdeaire.csv')
 aigre = aigre2.value_counts()
+aigre = aigre2.sort_values()
 aigre = pd.DataFrame(aigre)
 
 st.write(aigre)
@@ -62,7 +63,7 @@ fitaire = np.vectorize(fitaire)
 value_range = np.arange(27
                         )
 fitairelucescampero= px.line(x=value_range, y=fitaire(value_range))
-fitairelucescampero.add_bar(x=aigre["10"], y=aigre["count"])
+fitairelucescampero.add_bar(x=value_range, y=aigre["count"])
 st.plotly_chart(fitairelucescampero)
 
 
