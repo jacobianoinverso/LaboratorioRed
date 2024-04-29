@@ -168,6 +168,32 @@ fig.add_scatter(x=value_range2, y=fitgaussian(value_range2, *paramsa), mode='lin
 
 st.plotly_chart(fig)
 
+
+pinky = fitgaussian(value_range2, *paramsa)
+
+chipuyu = sum(pinky) / 250
+chipuyu str(chipuyu)
+
+st.write("Cuya prueba de χ cuadrado devuelve un valor de " + chipuyu)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 st.write("Y a continuación, los datos del cesio pero ajustados con la distribución de Poisson")
 
 data = load_data("chuchitosdecesio.csv")
