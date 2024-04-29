@@ -59,6 +59,7 @@ def fit_poisson(x, lam):
 lam_guess = 100
 
 params, _ = sco.curve_fit(fit_poisson, aigre_counts['value'], aigre_counts['count'], p0=[lam_guess])
+params, = pd.DataFrame(params)
 
 value_range = np.arange(aigre_counts['value'].min(), aigre_counts['value'].max() + 1)
 
