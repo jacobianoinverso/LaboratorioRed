@@ -136,3 +136,33 @@ fig = px.bar(x=morfosis['value'], y=morfosis['count'], labels={'x': 'Value', 'y'
 fig.add_scatter(x=value_range2, y=fitgaussian(value_range2, *paramsa), mode='lines', name='Curva ajustada')
 
 st.plotly_chart(fig)
+
+st.write("Y a continuación, los datos del cesio pero ajustados con la distribución de Poisson")
+
+datata = load_data("chuchitosdecesio.csv")
+
+# Estimar la distribución Poisson
+mu = datata['datata'].mean()
+poisson_distr = poisson(mu)
+xx = np.arange(0, data['data'].max() + 1)
+pmff = poisson_dist.pmf(x)
+
+# Crear un gráfico combinado
+fig, ax = plt.subplots(figsize=(8, 6))
+
+# Gráfico de barras de los datos originales
+ax.bar(datata['datata'].value_counts().sort_index().index, datata['datata'].value_counts().sort_index().values, label='Datos originales')
+ax.set_xlabel("Valor")
+ax.set_ylabel("Frecuencia")
+ax.set_title("Gráfico de barras de los datos originales")
+
+# Gráfico de la distribución Poisson estimada
+ax.plot(x, 250*pmf, 'ro-', label='Distribución Poisson estimada')
+ax.set_xlabel("Valor")
+ax.set_ylabel("Probabilidad")
+
+# Agregar leyenda
+ax.legend()
+
+# Mostrar gráfico
+st.pyplot(fig)
