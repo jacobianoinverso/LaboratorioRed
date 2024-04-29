@@ -180,7 +180,7 @@ chipuyu = str(chipuyu)
 st.write("Cuya prueba de χ cuadrado devuelve un valor de " + chipuyu)
 
 st.write("Como podemos observar, al tener más datos, las curvas se ajustan de mejor manera a los datos observados. Aquí, hay una diferencia más visible entre los diferentes ajustes sin ver las pruebas de χ cuadrado.")
-st.write("Podemos ver también que, aunque no sea tan precisa (en lo que cabe, ya que ninguna curva va a describir a la perfección un fenómeno) como la prueba de χ cuadrado de los datos de aire, sigfue siendo más acertada que la curva gaussiana.")
+
 
 st.title("Conclusiones")
 st.write("Las pruebas de χ cuadrado hechas para los ajustes gaussiano y de Poisson para los dos grupos de datos estudiados (cantidad de partículas en el aire y cantidad de partículas emitidas por una muestra de cesio-137)")
@@ -247,4 +247,28 @@ st.write("Podemos ver también que, aunque no sea tan precisa (en lo que cabe, y
 
 st.title("Conclusiones")
 st.write("Las pruebas de χ cuadrado hechas para los ajustes gaussiano y de Poisson para los dos grupos de datos estudiados (cantidad de partículas en el aire y cantidad de partículas emitidas por una muestra de cesio-137) nos mostraron de que ambas distribuciones describen de una manera aceptable ambos fenómenos.")
-st.write("La prueba también nos mostró que, de entre las dos distribuciones usadas, la que más se asemeja a los datos observados es la distribución de Poisson")
+st.write("La prueba también nos mostró que, de entre las dos distribuciones usadas, la que más se asemeja a los datos observados es la distribución de Poisson, por lo que se recomienda hacer uso de esta cuando se hagan estudios similares.")
+
+
+st.title("Bibliografía")
+
+st.write("John R. Taylor (1997). «An introduction to error analysis», 2nd edition.")
+st.write("Ahrens, Joachim H.; Dieter, Ulrich (1974). «Computer Methods for Sampling from Gamma, Beta, Poisson and Binomial Distributions».")
+st.write("Fuente de radionucleidos del gobierno de los Estados Unidos – producción, investigación, desarrollo, distribución e información.")
+
+
+pinulito = "http://www.mescours.info/physique-Decroissance_radioactive-32.xhtml"
+st.write("www.mescours.info . [Cours niveau Terminale S sur la décroissance radioactive](%s)") %pinulito
+pollito = "https://books.google.es/books?id=ZM-qMxtLABUC&pg=PA96&dq=Cesio-137++isótopo++cesio&hl=es&sa=X&ved=0ahUKEwik3qOGnoXZAhVTsBQKHT5bDosQ6AEIMTAC#v=onepage&q=Cesio-137%20%20isótopo%20%20cesio&f=false"
+st.write("Hill, John W. (1999). [Química para el nuevo milenio](%s)") %pollito
+
+
+
+
+
+
+
+
+
+
+
