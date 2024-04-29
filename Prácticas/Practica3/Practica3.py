@@ -87,8 +87,8 @@ inky = fitaire(value_range, *params)[:11]
 
 ironmaiden = sum(inky
                  ) / 250
-ironmaiden = round(ironmaiden,3)
-st.write(ironmaiden)
+ironmaiden = str(round(ironmaiden,3))
+st.write("Cuya prueba de χ cuadrado devuelve un valor de " + ironmaiden)
 
 
 
