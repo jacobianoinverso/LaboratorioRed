@@ -84,7 +84,7 @@ st.write("Estos son los mismos datos, pero ajustados a la distribución de Poiss
 
 
 st.write(fitaire(value_range, *params))
-st.write(fitaire(value_range, *params)+aigre["count"])
+st.write(aigre["count"])
 
 
 
