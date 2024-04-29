@@ -231,5 +231,7 @@ st.write("Sin embargo, hace falta la prueba ed χ cuadrado para saber si de verd
 
 
 
+aaaaaaaaaaa = str(round(sum(pmf),3))
 
+st.write("Cuya prueba de χ cuadrado devuelve un valor de " + aaaaaaaaaaa)
 
