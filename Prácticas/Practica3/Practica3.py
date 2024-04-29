@@ -80,11 +80,24 @@ fig = px.bar(x=aigre['value'], y=aigre['count'], labels={'x': 'Value', 'y': 'Cou
 fig.add_scatter(x=value_range, y=fitaire(value_range, *params), mode='lines', name='Curva ajustada')
 st.plotly_chart(fig)
 
-st.write("Estos son los mismos datos, pero ajustados a la distribución de Poisson")
-
+inky = fitaire(value_range, *params).loc[11]
+st.write(inky)
 
 st.write(fitaire(value_range, *params))
 st.write(aigre["count"])
+
+
+
+
+
+
+
+st.write("Estos son los mismos datos, pero ajustados a la distribución de Poisson")
+
+
+
+
+
 
 
 
