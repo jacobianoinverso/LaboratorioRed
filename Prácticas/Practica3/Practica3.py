@@ -91,7 +91,7 @@ st.write(inky)
 pollo = aigre["count"]
 st.write(pollo)
 
-mequierodormir = [((i+j)**2)/j for i, j in (pollo, inky)]
+mequierodormir = [((i+j)**2)/j for i, j in zip(pollo, inky)]
 st.write(mequierodormir)
 
 
