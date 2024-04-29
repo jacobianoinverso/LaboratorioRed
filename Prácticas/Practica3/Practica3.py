@@ -74,17 +74,3 @@ st.plotly_chart(fig2)
 
 
 
-def fit_poisson(x, lam):
-    return (np.exp(-lam) * np.power(lam, x)) / np.math.factorial(x)
-
-lam_guess = 100
-
-params, _ = sco.curve_fit(fit_poisson, aigre['value'], aigre['count'], p0=[lam_guess])
-
-value_range2 = np.arange(aigre['value'].min(), aigre['value'].max() + 1)
-
-fig = px.bar(x=aigre['value'], y=aigre['count'], labels={'x': 'Value', 'y': 'Count'}, title='Histograma de Valores')
-
-fig.add_scatter(x=value_range, y=fit_poisson(value_range, *params), mode='lines', name='Curva ajustada (Poisson)')
-
-st.plotly_chart(fig)
