@@ -54,7 +54,7 @@ def fitaire(x):
     return A*math.exp(-((x-u)/r)**2/2)
 
 fitaire = np.vectorize(fitaire)
-value_range = np.arange(15
+value_range = np.arange(1500
                         )
 fitairelucescampero= px.line(x=value_range, y=fitaire(value_range))
 st.plotly_chart(fitairelucescampero)
