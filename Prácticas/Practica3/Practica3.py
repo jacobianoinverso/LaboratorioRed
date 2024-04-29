@@ -46,7 +46,8 @@ st.latex(r'''cdf = \frac{\Gamma(\lfloor k+1\rfloor,\lambda)}{\lfloor k\rfloor!}'
 st.write("Donde Γ(x,y) es la función gamma incompleta")
 
 aigre = pd.read_csv('chuchitosdeaire.csv')
-aigre = aigre.loc[0,250]
+aigre = aigre.loc[0,250
+                                              ]
 aigre = pd.DataFrame(aigre)
 
 def fitaire(x):
